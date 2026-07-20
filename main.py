@@ -45,7 +45,7 @@ if __name__ in "__main__":
         destination=_destination, user_name=github_username, hash_files=False
     )
     _project_data = GitHubRailOSProjectData(
-        destination=_destination, user_name=github_username, api_token=_parser.token
+        destination=_destination, user_name=github_username, api_token=_args.token
     )
     _versions = sorted(list(_program_releases.program_versions.keys()))
     for page in (
