@@ -24,6 +24,7 @@ jobs:
               run: |
                   uv run python main.py
                   cp -r ./media/* ./dist/media/
+                  cp -r ./static/ ./dist/
 
             - name: Deploy to gh-pages branch
               uses: peaceiris/actions-gh-pages@v4
