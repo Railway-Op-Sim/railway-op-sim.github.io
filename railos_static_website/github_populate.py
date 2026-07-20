@@ -67,6 +67,7 @@ class GitHubRailOSProjectData:
         self._headers = {"User-Agent": user_name}
 
         if self._api_token:
+            print("Using API Token")
             self._headers = {"Authorization": f"Bearer {self._api_token}"}
         page = 1
 
