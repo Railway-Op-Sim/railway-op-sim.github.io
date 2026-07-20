@@ -1,0 +1,40 @@
+name: Build and Deploy Website
+
+on:
+    push:
+        branches:
+            - main # Runs whenever you push to main (change to 'master' if using master)
+    workflow_dispatch: # Allows manual triggers from the Actions tab
+
+permissions:
+    contents: write # Grants permissions to commit to the gh-pages branch
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.14"
+                  cache: "pip" # Caches dependencies if you have a requirements.txt
+
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  python -m pip install .
+
+            - name: Generate static site
+              run: |
+                  python main.py
+
+            - name: Deploy to gh-pages branch
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./dist
+                  publish_branch: gh-pages
