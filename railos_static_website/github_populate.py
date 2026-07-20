@@ -32,12 +32,15 @@ MEDIA_DIRECTORY: pathlib.Path = (
 class GitHubRailOSProjectData:
     """Retrieve RailOS project repositories and populate database."""
 
-    def __init__(self, destination: pathlib.Path, user_name: str) -> None:
+    def __init__(
+        self, destination: pathlib.Path, user_name: str, api_token: str | None
+    ) -> None:
         super().__init__()
-        self._repo_list: list[dict[str, str]] | None = None
+        self._repo_list: list[dict[str, str]] = []
         self._release_list: dict[str, list[str]] = {}
         self._params: dict[str, int] = {"per_page": 100}
         self._headers: dict[str, str] = {}
+        self._api_token: str | None = None
 
         _cache_file: pathlib.Path = destination.joinpath("restapi_cache.json")
         _data_cache: pathlib.Path = destination.joinpath("gh_data_cache")
@@ -63,23 +66,35 @@ class GitHubRailOSProjectData:
 
         self._headers = {"User-Agent": user_name}
 
-        _org_repos = requests.get(
-            _org_repos_url, params=self._params, headers=self._headers
-        )
+        if self._api_token:
+            self._headers |= {"Authorization": f"Bearer {self._api_token}"}
+        page = 1
 
-        if _org_repos.status_code != 200:
-            raise RuntimeError(
-                "Failed to retrieve data from GitHub, "
-                + f"request to '{_org_repos_url}' "
-                + f"returned status code {_org_repos.status_code}"
+        while True:
+
+            _org_repos = requests.get(
+                _org_repos_url,
+                params=self._params | {"page": page},
+                headers=self._headers,
             )
 
-        cache_file.parent.mkdir(exist_ok=True)
+            if _org_repos.status_code != 200:
+                raise RuntimeError(
+                    "Failed to retrieve data from GitHub, "
+                    + f"request to '{_org_repos_url}' "
+                    + f"returned status code {_org_repos.status_code}"
+                )
 
-        with cache_file.open("w") as out_file:
-            json.dump(_org_repos.json(), out_file, indent=2)
+            if not _org_repos:
+                break
 
-        self._repo_list = _org_repos.json()
+            cache_file.parent.mkdir(exist_ok=True)
+
+            with cache_file.open("w") as out_file:
+                json.dump(_org_repos.json(), out_file, indent=2)
+
+            self._repo_list += _org_repos.json()
+            page += 1
 
     def _filter_to_project_repos(self) -> None:
         _permitted_country_codes: list[str] = ["FN"] + [i.alpha_2 for i in countries]

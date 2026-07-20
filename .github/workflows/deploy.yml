@@ -22,7 +22,7 @@ jobs:
 
             - name: Generate static site
               run: |
-                  uv run python main.py
+                  uv run python main.py --token ${{ secrets.GITHUB_TOKEN }}
                   cp -r ./media/* ./dist/media/
                   cp -r ./static/ ./dist/
 

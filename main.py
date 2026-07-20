@@ -1,3 +1,4 @@
+from ast import arg
 import datetime
 import jinja2
 import pathlib
@@ -30,6 +31,13 @@ def render_page(
 
 
 if __name__ in "__main__":
+    import argparse
+
+    _parser = argparse.ArgumentParser()
+    _parser.add_argument(
+        "--token", "-t", type=str, default=None, help="Provide GH API token"
+    )
+    _args = _parser.parse_args()
     github_username = "zarethrex"
     _destination = pathlib.Path(__file__).parent.joinpath("dist")
     _destination.mkdir(exist_ok=True)
@@ -37,7 +45,7 @@ if __name__ in "__main__":
         destination=_destination, user_name=github_username, hash_files=False
     )
     _project_data = GitHubRailOSProjectData(
-        destination=_destination, user_name=github_username
+        destination=_destination, user_name=github_username, api_token=_parser.token
     )
     _versions = sorted(list(_program_releases.program_versions.keys()))
     for page in (
