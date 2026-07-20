@@ -40,7 +40,7 @@ class GitHubRailOSProjectData:
         self._release_list: dict[str, list[str]] = {}
         self._params: dict[str, int] = {"per_page": 100}
         self._headers: dict[str, str] = {}
-        self._api_token: str | None = None
+        self._api_token: str | None = api_token
 
         _cache_file: pathlib.Path = destination.joinpath("restapi_cache.json")
         _data_cache: pathlib.Path = destination.joinpath("gh_data_cache")
@@ -67,7 +67,7 @@ class GitHubRailOSProjectData:
         self._headers = {"User-Agent": user_name}
 
         if self._api_token:
-            self._headers |= {"Authorization": f"Bearer {self._api_token}"}
+            self._headers = {"Authorization": f"Bearer {self._api_token}"}
         page = 1
 
         while True:
