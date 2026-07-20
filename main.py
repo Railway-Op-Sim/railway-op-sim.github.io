@@ -31,10 +31,14 @@ def render_page(
 
 if __name__ in "__main__":
     github_username = "zarethrex"
+    _destination = pathlib.Path(__file__).parent.joinpath("dist")
+    _destination.mkdir(exist_ok=True)
     _program_releases = GitHubRailOSReleaseData(
-        user_name=github_username, hash_files=False
+        destination=_destination, user_name=github_username, hash_files=False
     )
-    _project_data = GitHubRailOSProjectData(user_name=github_username)
+    _project_data = GitHubRailOSProjectData(
+        destination=_destination, user_name=github_username
+    )
     _versions = sorted(list(_program_releases.program_versions.keys()))
     for page in (
         _templates := pathlib.Path(__file__).parent.joinpath("templates")

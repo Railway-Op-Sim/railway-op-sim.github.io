@@ -23,16 +23,16 @@ class GitHubRailOSReleaseData:
 
     logger = logging.getLogger("GitHubRailOSReleaseCommand")
 
-    def __init__(self, user_name: str, *, hash_files: bool = True) -> None:
+    def __init__(
+        self, destination: pathlib.Path, user_name: str, *, hash_files: bool = True
+    ) -> None:
         super().__init__()
         self._hash_files: bool = hash_files
         self._release_list: dict[str, dict[str, typing.Any]] = {}
         self._params: dict[str, int] = {"per_page": 100}
         self._headers: dict[str, str] = {}
         self.program_versions: dict[semver.Version, ProgramVersion] = {}
-        _cache_file: pathlib.Path = (
-            pathlib.Path(__file__).parents[1].joinpath("dist", "railos_release.json")
-        )
+        _cache_file: pathlib.Path = destination.joinpath("railos_release.json")
         if not (
             _entries := self._retrieve_latest_release(user_name, cache_file=_cache_file)
         ):

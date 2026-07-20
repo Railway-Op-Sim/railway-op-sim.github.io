@@ -33,19 +33,15 @@ class GitHubRailOSProjectData:
 
     logger = logging.getLogger("GitHubRetrievalCommand")
 
-    def __init__(self, user_name: str) -> None:
+    def __init__(self, destination: pathlib.Path, user_name: str) -> None:
         super().__init__()
         self._repo_list: list[dict[str, str]] | None = None
         self._release_list: dict[str, list[str]] = {}
         self._params: dict[str, int] = {"per_page": 100}
         self._headers: dict[str, str] = {}
 
-        _cache_file: pathlib.Path = (
-            pathlib.Path(__file__).parents[1].joinpath("dist", "restapi_cache.json")
-        )
-        _data_cache: pathlib.Path = (
-            pathlib.Path(__file__).parents[1].joinpath("dist", "gh_data_cache")
-        )
+        _cache_file: pathlib.Path = destination.joinpath("restapi_cache.json")
+        _data_cache: pathlib.Path = destination.joinpath("gh_data_cache")
         _data_cache.mkdir(exist_ok=True)
 
         self._retrieve_or_get_metadata(user_name, _cache_file)
