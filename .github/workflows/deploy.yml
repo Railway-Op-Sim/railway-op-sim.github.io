@@ -23,6 +23,7 @@ jobs:
             - name: Generate static site
               run: |
                   uv run python main.py
+                  cp -r ./media/* ./dist/media/
 
             - name: Deploy to gh-pages branch
               uses: peaceiris/actions-gh-pages@v4
