@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="114"
+   viewBox="0 0 79.374998 30.1625"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="C:\Users\kzare\bitmap.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="RailOSBanner_dark.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="3.5647823"
+     inkscape:cx="83.455306"
+     inkscape:cy="64.66033"
+     inkscape:window-width="1452"
+     inkscape:window-height="752"
+     inkscape:window-x="170"
+     inkscape:window-y="114"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g38163"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g5292"
+       transform="matrix(0.13413,0,0,0.13413,22.378513,-0.02666756)">
+      <g
+         id="g38163"
+         transform="rotate(180,-18.50623,54.721612)">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:15.8091;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -92.287478,39.228418 c 81.955275,0 124.157272,0 206.112538,0"
+           id="path970"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:15.8091;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 113.86405,-43.756561 H -92.627972"
+           id="path970-4"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:15.8034;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 100.29379,-43.825837 c 0,0 -51.577743,-1.701603 -92.4227401,42.5068927 C -2.3105771,9.7011192 -12.152217,17.71745 -21.550527,23.54843 -45.940628,38.680745 -67.668055,39.189689 -84.280379,39.189689"
+           id="path1107"
+           sodipodi:nodetypes="cssc" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:7.22186;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -60.002127,-49.200621 v -22.627186 h 20.32612"
+           id="path1280" />
+        <path
+           style="fill:#ff0000;fill-opacity:1;stroke:#ffffff;stroke-width:4.35279;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+           id="path19490"
+           sodipodi:type="arc"
+           sodipodi:cx="-27.730402"
+           sodipodi:cy="-72.50988"
+           sodipodi:rx="13.792336"
+           sodipodi:ry="13.792336"
+           sodipodi:start="2.618151"
+           sodipodi:end="2.6179939"
+           sodipodi:open="true"
+           sodipodi:arc-type="arc"
+           d="m -39.675999,-65.615589 a 13.792336,13.792336 0 0 1 5.050836,-18.839617 13.792336,13.792336 0 0 1 18.839817,5.050096 13.792336,13.792336 0 0 1 -5.049357,18.840015 13.792336,13.792336 0 0 1 -18.840213,-5.048617" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:7.22186;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 76.024547,46.389731 V 69.016917 H 55.698427"
+           id="path1280-12" />
+        <path
+           style="fill:#ff0000;fill-opacity:1;stroke:#ffffff;stroke-width:4.35279;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+           id="path19490-1"
+           sodipodi:type="arc"
+           sodipodi:cx="-43.752823"
+           sodipodi:cy="-69.69899"
+           sodipodi:rx="13.792336"
+           sodipodi:ry="13.792336"
+           sodipodi:start="2.618151"
+           sodipodi:end="2.6179939"
+           sodipodi:open="true"
+           sodipodi:arc-type="arc"
+           d="m -55.69842,-62.804698 a 13.792336,13.792336 0 0 1 5.050837,-18.839618 13.792336,13.792336 0 0 1 18.839816,5.050096 13.792336,13.792336 0 0 1 -5.049357,18.840015 13.792336,13.792336 0 0 1 -18.840213,-5.048617"
+           transform="scale(-1)" />
+        <text
+           xml:space="preserve"
+           style="font-size:68.814px;line-height:0.95;font-family:'Gill Sans';-inkscape-font-specification:'Gill Sans';stroke-width:1.72035;fill:#ffffff;fill-opacity:1"
+           x="125.63365"
+           y="-44.439342"
+           id="text43146"
+           transform="scale(-1)"><tspan
+             sodipodi:role="line"
+             id="tspan43144"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:1.72035;fill:#ffffff;fill-opacity:1"
+             x="125.63365"
+             y="-44.439342">Railway </tspan><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:1.72035;fill:#ffffff;fill-opacity:1"
+             x="125.63365"
+             y="27.385578"
+             id="tspan43150">Operation</tspan><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:1.72035;fill:#ffffff;fill-opacity:1"
+             x="125.63365"
+             y="99.210495"
+             id="tspan43154">Simulator</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

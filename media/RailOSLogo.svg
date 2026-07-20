@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 132.29166 132.29167"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="RailOSLogo.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:export-filename="C:\Users\kzare\Documents\GitHub\Windows-Installer\media\RailOSInstall.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="1.0998546"
+     inkscape:cx="157.29352"
+     inkscape:cy="229.5758"
+     inkscape:window-width="1519"
+     inkscape:window-height="752"
+     inkscape:window-x="121"
+     inkscape:window-y="100"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.657;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       id="path2527"
+       sodipodi:type="arc"
+       sodipodi:cx="66.145836"
+       sodipodi:cy="66.145836"
+       sodipodi:rx="58.660816"
+       sodipodi:ry="58.660816"
+       sodipodi:start="2.618151"
+       sodipodi:end="2.6179939"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 15.339471,95.468262 A 58.660816,58.660816 0 0 1 36.821415,15.340623 58.660816,58.660816 0 0 1 116.9499,36.819419 58.660816,58.660816 0 0 1 95.474248,116.94875 58.660816,58.660816 0 0 1 15.344078,95.476243"
+       inkscape:export-filename="F:\Documents_Backup\Graphics\RailOSlogo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g5292"
+       transform="matrix(1.2703124,0,0,1.2703124,-17.880043,-3.3677104)"
+       inkscape:export-filename="F:\Documents_Backup\Graphics\RailOSlogo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:7.7565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 20.91107,74.657966 H 111.52"
+         id="path970" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:7.7565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 20.771669,33.942714 H 111.3806"
+         id="path970-4" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:7.9204;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 20.980768,74.588268 c 0,0 25.305795,0.834864 45.345735,-20.855325 C 84.285946,34.294575 100.08935,34.22151 111.3806,34.22151"
+         id="path1107"
+         sodipodi:nodetypes="csc" />
+      <g
+         id="g2032"
+         transform="matrix(1.3110036,0,0,1.3110036,-9.6293985,4.1491836)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:2.70273;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 32.313698,20.688342 v -8.468067 h 7.606909"
+           id="path1280" />
+        <path
+           style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.629;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+           id="path19490"
+           sodipodi:type="arc"
+           sodipodi:cx="44.391167"
+           sodipodi:cy="11.965014"
+           sodipodi:rx="5.1616855"
+           sodipodi:ry="5.1616855"
+           sodipodi:start="2.618151"
+           sodipodi:end="2.6179939"
+           sodipodi:open="true"
+           sodipodi:arc-type="arc"
+           d="m 39.92061,14.545155 a 5.1616855,5.1616855 0 0 1 1.890241,-7.0505954 5.1616855,5.1616855 0 0 1 7.050669,1.8899634 5.1616855,5.1616855 0 0 1 -1.889686,7.050744 5.1616855,5.1616855 0 0 1 -7.050818,-1.88941" />
+      </g>
+      <g
+         id="g2032-7"
+         transform="matrix(-1.3110036,0,0,-1.3110036,141.83666,105.29404)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:2.70273;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 32.313698,20.688342 v -8.468067 h 7.606909"
+           id="path1280-12" />
+        <path
+           style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.629;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+           id="path19490-1"
+           sodipodi:type="arc"
+           sodipodi:cx="44.391167"
+           sodipodi:cy="11.965014"
+           sodipodi:rx="5.1616855"
+           sodipodi:ry="5.1616855"
+           sodipodi:start="2.618151"
+           sodipodi:end="2.6179939"
+           sodipodi:open="true"
+           sodipodi:arc-type="arc"
+           d="m 39.92061,14.545155 a 5.1616855,5.1616855 0 0 1 1.890241,-7.0505954 5.1616855,5.1616855 0 0 1 7.050669,1.8899634 5.1616855,5.1616855 0 0 1 -1.889686,7.050744 5.1616855,5.1616855 0 0 1 -7.050818,-1.88941" />
+      </g>
+    </g>
+  </g>
+</svg>
