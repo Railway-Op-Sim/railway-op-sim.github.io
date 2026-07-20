@@ -1,3 +1,4 @@
+import http
 import datetime
 import semver
 from railos_static_website.models import Project, Version, FileStorage
@@ -46,11 +47,6 @@ class GitHubRailOSProjectData:
         self._filter_to_project_repos()
         self._filter_to_released_projects(_data_cache)
         self.projects: dict[semver.Version, Project] = self._build_versions()
-
-    @property
-    def latest_version(self) -> str:
-        """Get Latest program version."""
-        return
 
     def _retrieve_or_get_metadata(
         self, user_name: str, cache_file: pathlib.Path
@@ -122,17 +118,19 @@ class GitHubRailOSProjectData:
                 _release_results.append(result)
                 continue
             _releases_url: str = "/".join((result["url"], "releases"))
-            if not (
-                _releases := requests.get(
-                    _releases_url, headers=self._headers, params=self._params
-                )
+            _releases_req = requests.get(
+                _releases_url, headers=self._headers, params=self._params
+            )
+
+            if _releases_req.status_code != http.HTTPStatus.OK or not (
+                _release_json := _releases_req.json()
             ):
                 print(f"Skipping {result['name']} as no releases.")
                 continue
-            self._release_list[result["name"]] = _releases.json()
+            self._release_list[result["name"]] = _release_json
 
             with _json_file.open("w") as out_f:
-                json.dump(_releases.json(), out_f, indent=2)
+                json.dump(_release_json, out_f, indent=2)
 
             _release_results.append(result)
 
