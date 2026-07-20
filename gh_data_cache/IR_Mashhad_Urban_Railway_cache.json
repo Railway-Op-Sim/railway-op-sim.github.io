@@ -1,10 +1,10 @@
 [
   {
-    "url": "https://api.github.com/repos/Railway-Op-Sim/IE-Dublin-Area/releases/59751225",
-    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/IE-Dublin-Area/releases/59751225/assets",
-    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/IE-Dublin-Area/releases/59751225/assets{?name,label}",
-    "html_url": "https://github.com/Railway-Op-Sim/IE-Dublin-Area/releases/tag/v1.0.0",
-    "id": 59751225,
+    "url": "https://api.github.com/repos/Railway-Op-Sim/IR-Mashhad-Urban-Railway/releases/89954239",
+    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/IR-Mashhad-Urban-Railway/releases/89954239/assets",
+    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/IR-Mashhad-Urban-Railway/releases/89954239/assets{?name,label}",
+    "html_url": "https://github.com/Railway-Op-Sim/IR-Mashhad-Urban-Railway/releases/tag/v1.0.0",
+    "id": 89954239,
     "author": {
       "login": "zarethrex",
       "id": 15262250,
@@ -26,22 +26,22 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "node_id": "RE_kwDOGvG-ds4Dj7s5",
+    "node_id": "RE_kwDOI0nqDs4FXJe_",
     "tag_name": "v1.0.0",
-    "target_commitish": "master",
-    "name": "Railway-Op-Sim/IE-Dublin-Area Release v1.0.0",
+    "target_commitish": "main",
+    "name": "Railway-Op-Sim/IR-Mashhad-Urban-Railway Release v1.0.0",
     "draft": false,
     "immutable": false,
     "prerelease": false,
-    "created_at": "2022-02-16T23:05:31Z",
-    "updated_at": "2022-02-16T23:06:43Z",
-    "published_at": "2022-02-16T23:05:48Z",
+    "created_at": "2023-01-23T18:49:12Z",
+    "updated_at": "2023-01-23T18:54:28Z",
+    "published_at": "2023-01-23T18:51:25Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/Railway-Op-Sim/IE-Dublin-Area/releases/assets/57077043",
-        "id": 57077043,
-        "node_id": "RA_kwDOGvG-ds4DZu0z",
-        "name": "Dublin-Area_v1_0_0.zip",
+        "url": "https://api.github.com/repos/Railway-Op-Sim/IR-Mashhad-Urban-Railway/releases/assets/92757131",
+        "id": 92757131,
+        "node_id": "RA_kwDOI0nqDs4Fh1yL",
+        "name": "Mashhad-Urban-Railway_v1_0_0.zip",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -66,16 +66,16 @@
         },
         "content_type": "application/zip",
         "state": "uploaded",
-        "size": 101415,
+        "size": 213627,
         "digest": null,
-        "download_count": 47,
-        "created_at": "2022-02-16T23:06:43Z",
-        "updated_at": "2022-02-16T23:06:43Z",
-        "browser_download_url": "https://github.com/Railway-Op-Sim/IE-Dublin-Area/releases/download/v1.0.0/Dublin-Area_v1_0_0.zip"
+        "download_count": 45,
+        "created_at": "2023-01-23T18:54:27Z",
+        "updated_at": "2023-01-23T18:54:28Z",
+        "browser_download_url": "https://github.com/Railway-Op-Sim/IR-Mashhad-Urban-Railway/releases/download/v1.0.0/Mashhad-Urban-Railway_v1_0_0.zip"
       }
     ],
-    "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/IE-Dublin-Area/tarball/v1.0.0",
-    "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/IE-Dublin-Area/zipball/v1.0.0",
-    "body": ""
+    "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/IR-Mashhad-Urban-Railway/tarball/v1.0.0",
+    "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/IR-Mashhad-Urban-Railway/zipball/v1.0.0",
+    "body": "First release of simulation depicting the Mashhad Urban Railway in the city of Mashhad, Iran in early 2023."
   }
 ]
