@@ -31,8 +31,6 @@ MEDIA_DIRECTORY: pathlib.Path = (
 class GitHubRailOSProjectData:
     """Retrieve RailOS project repositories and populate database."""
 
-    logger = logging.getLogger("GitHubRetrievalCommand")
-
     def __init__(self, destination: pathlib.Path, user_name: str) -> None:
         super().__init__()
         self._repo_list: list[dict[str, str]] | None = None
@@ -129,7 +127,7 @@ class GitHubRailOSProjectData:
                     _releases_url, headers=self._headers, params=self._params
                 )
             ):
-                self.logger.warning(f"Skipping {result['name']} as no releaes.")
+                print(f"Skipping {result['name']} as no releases.")
                 continue
             self._release_list[result["name"]] = _releases.json()
 
@@ -258,7 +256,7 @@ class GitHubRailOSProjectData:
             for release in _releases:
                 if not (_assets := release["assets"]):
                     print(
-                        f"WARNING: Ignoring '{release['tag_name']}' for '{release['name']}'"
+                        f"WARNING: Ignoring '{release['tag_name']}' for '{release['name']}' as no assets available."
                     )
                     continue
                 _meta_data, _file_data, _image_data = self._get_file_metadata(

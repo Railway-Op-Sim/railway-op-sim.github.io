@@ -21,8 +21,6 @@ RAILOS_REPOSITORY: str = "railway-dot-exe"
 class GitHubRailOSReleaseData:
     """Retrieve RailOS latest releases."""
 
-    logger = logging.getLogger("GitHubRailOSReleaseCommand")
-
     def __init__(
         self, destination: pathlib.Path, user_name: str, *, hash_files: bool = True
     ) -> None:
