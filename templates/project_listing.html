@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block page_contents %}
+
+<br>
+
+<div class="container text-start">
+    <div class="row">
+        <h3>Browse our Community Projects</h3>
+        <p>An ever growing collection of worldwide railways, ready for you to take control.</p>
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+        {% for project in projects.values() %}
+        <div class="p-2">
+            <div class="card">
+                {% with _, latest_version=project.versions.items() | sort(attribute="release_date") | last %}
+                <img class="card-img-top" src="{{latest_version.image_url}}" alt="">
+                {% endwith %}
+                <div class="card-body">
+                    <h5 class="card-title">{{project.name}}</h5>
+                    <p class="card-text">{{project.description}}</p>
+                    <a href="/projects/{{project.websafe_name}}.html" class="btn btn-secondary">More Info</a>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <h2>No results found</h2>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

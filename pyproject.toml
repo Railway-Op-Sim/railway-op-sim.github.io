@@ -1,0 +1,23 @@
+[project]
+name = "railos-static"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2>=3.1.6",
+    "pydantic>=2.13.4",
+    "requests>=2.34.2",
+    "semver>=3.0.4",
+    "toml>=0.10.2",
+    "railostools",
+    "pycountry>=24.6.1",
+]
+
+[tool.uv.sources]
+railostools = { git = "https://github.com/Railway-Op-Sim/railostools.git", subdirectory = "python" }
+
+[dependency-groups]
+dev = [
+    "httpserver>=1.1.0",
+]

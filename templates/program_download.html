@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block page_contents%}
+<br>
+
+<div class="container text-left py-3">
+
+    <h2>Download Railway Operation Simulator</h2>
+    <br>
+    <div class="text-left">
+        The latest software version can be downloaded below, you can either download an archived binary and run the
+        program from the extracted directory or use one of the provided installers.
+        The installer also includes options to install additional utility applications to compliment the software. No
+        additional software is required.
+        Alternatively the software is now available to install via the <a
+            href="https://community.chocolatey.org/packages/railwayopsim" style="text-decoration:none">Chocolatey</a>
+        package manager.
+    </div>
+    <br>
+
+    <div class="card">
+        <div class="card-header" style="text-align:left;">
+            <h3>Latest Release ({{ latest_version.semantic_version }})</h3>
+        </div>
+        <div class="card-body" style="text-align:left;">
+            <p>This is the latest stable release of RailOS, published {{latest_version.release_date.strftime('%d/%m/%Y')
+                }}. This version has been tested and reviewed by the developer and community. </p>
+            <p>Binary distributions:</p>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col-3">Platform</th>
+                        <th scope="col">Files</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows 32-bit</td>
+                        <td><a href="{{latest_version.download_url_32bit}}"
+                                style="text-decoration:none">{{file_name_32bit}}</a></td>
+                    </tr>
+                    <tr>
+                        <td>Windows 64-bit</td>
+                        <td><a href="{{latest_version.download_url_64bit}}"
+                                style="text-decoration:none">{{file_name_64bit}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Installers:</p>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col-3">Platform</th>
+                        <th scope="col">Files</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows 32-bit & 64-bit</td>
+                        <td>{{ latest_windows_installer | default("-") }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header" style="text-align:left;">
+            <h3>Previous Release ({{penultimate_version.semantic_version}})</h3>
+        </div>
+        <div class="card-body" style="text-align:left;">
+            <p>This release was published {{ penultimate_version.release_date.strftime('%d/%m/%Y') }}. This version has
+                been
+                tested and reviewed by the developer and community. </p>
+            <p>Binary distributions:</p>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col-3">Platform</th>
+                        <th scope="col">Files</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows 32-bit</td>
+                        <td><a href="{{penultimate_version.download_url_32bit}}"
+                                style="text-decoration:none">{{file_name_32bit}}</a>
+                    </tr>
+                    <tr>
+                        <td>Windows 64-bit</td>
+                        <td><a href="{{penultimate_version.download_url_64bit}}"
+                                style="text-decoration:none">{{file_name_64bit}}</a>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Installers:</p>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col-3">Platform</th>
+                        <th scope="col">Files</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows 32-bit & 64-bit</td>
+                        <td>{{ latest_windows32_bit_archive | default("-") }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header" style="text-align:left;">
+            <h3>Chocolatey</h3>
+        </div>
+        <div class="card-body" style="text-align:left;">
+            <p>As of version 2.14.0, the program can be installed using the Chocolatey package manager either via the
+                Chocolatey GUI or the command line: </p>
+            <div class="container pl-2 py-2 bg-dark rounded">
+                <code>$ choco install railwayopsim --version={{ latest_version.semantic_version }}</code>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br>
+
+
+{% endblock %}
