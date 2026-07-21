@@ -24,6 +24,7 @@ class Version(pd.BaseModel):
     contributors: list[str] = pd.Field(default_factory=list[str])
     download_url: FileStorage
     project_name: str
+    download_hash: str
     model_config = pd.ConfigDict(arbitrary_types_allowed=True)
 
     def __str__(self) -> str:

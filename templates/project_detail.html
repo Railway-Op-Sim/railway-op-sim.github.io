@@ -22,10 +22,12 @@
             <p>
                 {{ project.description }}
             </p>
+            <p class="text-body-secondary">
+                sha256:{{ latest_version.download_hash }}
+            </p>
             <div class="card-body">
-                <h5 class="card-title">{{project.name}}</h5>
-                <p class="card-text">{{project.description}}</p>
-                <a href="{{ latest_version.download_url }}" class="btn btn-secondary">Download</a>
+                <a href="{{ latest_version.download_url }}" class="btn btn-secondary">Download v{{
+                    latest_version.semantic_version }}</a>
                 <a href="{{ (latest_version.download_url | string).split('releases')[0] }}"
                     class="btn btn-secondary d-inline-flex align-items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

@@ -29,37 +29,42 @@
                 <thead>
                     <tr>
                         <th scope="col-3">Platform</th>
+                        <th scope="col-2"></th>
                         <th scope="col">Files</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Windows 32-bit</td>
+                        <td>{{ latest_version.download_url_32bit.sha256_hash }}</td>
                         <td><a href="{{latest_version.download_url_32bit}}"
                                 style="text-decoration:none">{{file_name_32bit}}</a></td>
                     </tr>
                     <tr>
                         <td>Windows 64-bit</td>
+                        <td>{{ latest_version.download_url_64bit.sha256_hash }}</td>
                         <td><a href="{{latest_version.download_url_64bit}}"
                                 style="text-decoration:none">{{file_name_64bit}}</a></td>
                     </tr>
                 </tbody>
             </table>
-            <p>Installers:</p>
+            <!-- <p>Installers:</p>
             <table class="table table-sm">
                 <thead>
                     <tr>
                         <th scope="col-3">Platform</th>
+                        <th scope="col-2"></th>
                         <th scope="col">Files</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Windows 32-bit & 64-bit</td>
+                        <td></td>
                         <td>{{ latest_windows_installer | default("-") }}</td>
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
         </div>
     </div>
     <br>
@@ -76,37 +81,42 @@
                 <thead>
                     <tr>
                         <th scope="col-3">Platform</th>
+                        <th scope="col-2"></th>
                         <th scope="col">Files</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Windows 32-bit</td>
+                        <td>{{ penultimate_version.download_url_32bit.sha256_hash }}</td>
                         <td><a href="{{penultimate_version.download_url_32bit}}"
                                 style="text-decoration:none">{{file_name_32bit}}</a>
                     </tr>
                     <tr>
                         <td>Windows 64-bit</td>
+                        <td>{{ penultimate_version.download_url_64bit.sha256_hash }}</td>
                         <td><a href="{{penultimate_version.download_url_64bit}}"
                                 style="text-decoration:none">{{file_name_64bit}}</a>
                     </tr>
                 </tbody>
             </table>
-            <p>Installers:</p>
+            <!-- <p>Installers:</p>
             <table class="table table-sm">
                 <thead>
                     <tr>
                         <th scope="col-3">Platform</th>
+                        <th scope="col-2"></th>
                         <th scope="col">Files</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Windows 32-bit & 64-bit</td>
+                        <td></td>
                         <td>{{ latest_windows32_bit_archive | default("-") }}</td>
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
         </div>
     </div>
     <br>

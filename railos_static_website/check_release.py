@@ -88,25 +88,32 @@ class GitHubRailOSReleaseData:
         _release_date: str = release_entry["published_at"].split("T")[0]
         _download_url_32_bit: str | None = None
         _download_url_64_bit: str | None = None
+        _hash_32_bit: str | None = None
+        _hash_64_bit: str | None = None
         try:
             if "RailOS" not in release_entry["assets"][0].get("name"):
                 _download_url_32_bit = release_entry["assets"][0][
                     "browser_download_url"
                 ]
+                _hash_32_bit = release_entry["assets"][0]["digest"]
             elif "RailOS32" in release_entry["assets"][0].get("name"):
                 _download_url_32_bit = release_entry["assets"][0][
                     "browser_download_url"
                 ]
+                _hash_32_bit = release_entry["assets"][0]["digest"]
                 _download_url_64_bit = release_entry["assets"][1][
                     "browser_download_url"
                 ]
+                _hash_64_bit = release_entry["assets"][1]["digest"]
             else:
                 _download_url_64_bit = release_entry["assets"][0][
                     "browser_download_url"
                 ]
+                _hash_64_bit = release_entry["assets"][0]["digest"]
                 _download_url_32_bit = release_entry["assets"][1][
                     "browser_download_url"
                 ]
+                _hash_32_bit = release_entry["assets"][1]["digest"]
         except IndexError:
             print(f"WARNING: No files found for tag '{release_entry['tag_name']}'")
             return None
@@ -117,41 +124,10 @@ class GitHubRailOSReleaseData:
         if _download_url_64_bit:
             _download_url_dat_64 = urllib.parse.urlparse(_download_url_64_bit)
 
-        _hash: str = ""
-
-        if self._hash_files:
-            with tempfile.TemporaryDirectory() as tempd_32:
-                _download_loc: str = os.path.join(tempd_32, "download.zip")
-                if _download_url_32_bit:
-                    _request = requests.get(_download_url_32_bit, headers=self._headers)
-                    _ = pathlib.Path(_download_loc).write_bytes(_request.content)
-                _out_zip: str = os.path.join(tempd_32, "download")
-                try:
-                    with zipfile.ZipFile(_download_loc) as z_out:
-                        z_out.extractall(_out_zip)
-                except Exception:
-                    print(f"WARNING: Failed to extract zip file '{_download_loc}'")
-                    return None
-                _hash = hash_file(_download_loc)
-
-        if _download_url_64_bit and self._hash_files:
-            with tempfile.TemporaryDirectory() as tempd_64:
-                _download_loc: str = os.path.join(tempd_64, "download.zip")
-                _request = requests.get(_download_url_64_bit, headers=self._headers)
-                _ = pathlib.Path(_download_loc).write_bytes(_request.content)
-                _out_zip: str = os.path.join(tempd_64, "download")
-                try:
-                    with zipfile.ZipFile(_download_loc) as z_out:
-                        z_out.extractall(_out_zip)
-                except Exception:
-                    print(f"WARNING: Failed to extract zip file '{_download_loc}'")
-                    return None
-                _hash = hash_file(_download_loc)
-
         _file_storage_32 = FileStorage(
             netloc=_download_url_dat_32.netloc,
             path=_download_url_dat_32.path,
-            sha256_hash=_hash,
+            sha256_hash=_hash_32_bit,
             scheme=_download_url_dat_32.scheme,
         )
 
@@ -159,7 +135,7 @@ class GitHubRailOSReleaseData:
             _file_storage_64 = FileStorage(
                 netloc=_download_url_dat_64.netloc,
                 path=_download_url_dat_64.path,
-                sha256_hash=_hash,
+                sha256_hash=_hash_64_bit,
                 scheme=_download_url_dat_64.scheme,
             )
 

@@ -12,12 +12,12 @@
 
 <br>
 
-<div class="accordion" id="projectListing">
+<div class="accordion accordion-flush mx-auto" id="projectListing" style="max-width: 1300px;">
     {% for country_code in (projects.keys() | sort) %}
     <div class="accordion-item">
         <h2 id="heading{{ loop.index }}" class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse{{ loop.index }}" aria-expanded="{{ 'true' if loop.index == 1 else ''}}"
+            <button class="accordion-button {% if not loop.first %}collapsed{% endif %}" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="{{ loop.first }}"
                 aria-controls="collapse{{ loop.index }}">
                 {{ country_code }}
             </button>
@@ -40,7 +40,8 @@
                                 <p class="card-text">{{project.description}}</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/{{ project.websafe_name }}.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/{{ project.websafe_name }}.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>

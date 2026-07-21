@@ -13,6 +13,7 @@ import typing
 import re
 import os
 import pathlib
+import hashlib
 import tempfile
 import toml
 import json
@@ -173,7 +174,7 @@ class GitHubRailOSProjectData:
 
     def _get_file_metadata(
         self, download_url: str
-    ) -> tuple[dict[str, str], dict[str, str], str]:
+    ) -> tuple[dict[str, str], dict[str, str], str, str]:
         with tempfile.TemporaryDirectory() as tempd:
             _download_loc: pathlib.Path = pathlib.Path(tempd).joinpath("download.zip")
             _request = requests.get(download_url)
@@ -184,7 +185,9 @@ class GitHubRailOSProjectData:
                     z_out.extractall(_out_zip)
             except Exception:
                 self.error(f"Failed to extract zip file '{_download_loc}'")
-                return {}, {}, ""
+                return {}, {}, "", ""
+            with _download_loc.open("rb") as in_f:
+                _digest = hashlib.file_digest(in_f, "sha256")
             _metadata_files = glob.glob(
                 os.path.join(_out_zip, "**", "*.toml"), recursive=True
             )
@@ -197,7 +200,7 @@ class GitHubRailOSProjectData:
                     f"WARNING: Failed to obtain metadata for project from '{download_url}'"
                 )
                 print(f"Package contents: {os.listdir(_out_zip)}")
-                return {}, {}, ""
+                return {}, {}, "", ""
 
             _metadata_file: str = _metadata_files[0]
 
@@ -208,7 +211,7 @@ class GitHubRailOSProjectData:
                     f"WARNING: Metadata validation failed for project from '{download_url}':\n{e}"
                 )
                 print(f"Validation returned: {e}")
-                return {}, {}, ""
+                return {}, {}, "", ""
 
             _metadata = toml.load(_metadata_file)
 
@@ -230,7 +233,7 @@ class GitHubRailOSProjectData:
                     f"Failed to get local image data for '{_metadata["name"]}'. "
                     + f"Expected file '{_image_file}' in Images folder of archive, but this does not exist."
                 )
-                return {}, {}, ""
+                return {}, {}, "", ""
 
             _hash = hash_file(f"{_download_loc}")
 
@@ -243,7 +246,7 @@ class GitHubRailOSProjectData:
                 "hash": _hash,
             }
 
-        return _metadata, _file_remote_data, _image_local_data
+        return _metadata, _file_remote_data, _image_local_data, _digest.hexdigest()
 
     def _build_file_storage(
         self, file_store_data: dict[str, typing.Any]
@@ -272,7 +275,7 @@ class GitHubRailOSProjectData:
             raise ValueError("Expected name for project.")
 
         return Project(
-            name=_name,
+            name=_name.replace("_", " "),
             display_name=_display_name or _name,
             factual=_factual,
             description=_description,
@@ -296,8 +299,8 @@ class GitHubRailOSProjectData:
                         f"Ignoring '{release['tag_name']}' for '{release['name']}' as no assets available."
                     )
                     continue
-                _meta_data, _file_data, _image_data = self._get_file_metadata(
-                    _assets[0]["browser_download_url"]
+                _meta_data, _file_data, _image_data, _zip_hash = (
+                    self._get_file_metadata(_assets[0]["browser_download_url"])
                 )
                 if not _meta_data:
                     continue
@@ -336,6 +339,7 @@ class GitHubRailOSProjectData:
                     image_url=_image_data,
                     contributors=_contributors,
                     project_name=_project_name,
+                    download_hash=_zip_hash,
                 )
                 _project.versions[_version.semantic_version] = _version
             if _project and _project_name:
