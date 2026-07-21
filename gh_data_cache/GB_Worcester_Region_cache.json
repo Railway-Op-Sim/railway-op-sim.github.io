@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 89043,
         "digest": "sha256:0774fb7126a93f25ee4870a10eb392faef7cedb983be4b35eca49981a9fcbb01",
-        "download_count": 65,
+        "download_count": 67,
         "created_at": "2026-03-01T16:32:30Z",
         "updated_at": "2026-03-01T16:32:30Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Worcester-Region/releases/download/v1.1.0/Worcester-Region_v1_1_0.zip"
@@ -147,7 +147,7 @@
         "state": "uploaded",
         "size": 78369,
         "digest": "sha256:880fa3d294804b767459a6effda79736b8563d706db8bdb6183f175a26e2f8d8",
-        "download_count": 65,
+        "download_count": 67,
         "created_at": "2026-03-01T16:32:34Z",
         "updated_at": "2026-03-01T16:32:34Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Worcester-Region/releases/download/v1.0.0/Worcester-Region_v1_0_0.zip"
