@@ -150,9 +150,11 @@ class GitHubRailOSProjectData:
                 self._release_list[result["name"]] = json.load(open(_json_file))
                 _release_results.append(result)
                 continue
-            _releases_url: str = "/".join((result["url"], "releases"))
+
             _releases_req = requests.get(
-                _releases_url, headers=self._headers, params=self._params
+                result["releases_url"].replace("{/id}", ""),
+                headers=self._headers,
+                params=self._params,
             )
 
             if _releases_req.status_code != http.HTTPStatus.OK or not (
