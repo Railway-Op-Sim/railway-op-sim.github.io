@@ -80,7 +80,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -108,7 +108,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -193,7 +193,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -219,7 +219,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -304,7 +304,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -338,7 +338,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -423,7 +423,7 @@
     "language": "C++",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": true,
     "has_discussions": false,
@@ -457,7 +457,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -542,7 +542,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -568,7 +568,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -653,7 +653,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -681,7 +681,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -766,7 +766,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -794,7 +794,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -879,7 +879,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -905,7 +905,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -990,7 +990,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": false,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": false,
     "has_pages": false,
     "has_discussions": false,
@@ -1018,7 +1018,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -1103,7 +1103,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -1129,7 +1129,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -1214,7 +1214,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -1240,7 +1240,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -1325,7 +1325,7 @@
     "language": "Python",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -1359,7 +1359,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -1444,7 +1444,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": false,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": false,
     "has_pages": false,
     "has_discussions": true,
@@ -1478,7 +1478,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -1563,7 +1563,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -1595,7 +1595,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -1712,7 +1712,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -1797,7 +1797,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -1831,7 +1831,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -1916,7 +1916,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -1950,7 +1950,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2035,7 +2035,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -2069,7 +2069,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2154,7 +2154,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -2188,7 +2188,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2273,7 +2273,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -2307,7 +2307,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2392,7 +2392,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -2426,7 +2426,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2511,7 +2511,7 @@
     "language": null,
     "has_issues": false,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -2537,7 +2537,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2622,7 +2622,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -2656,7 +2656,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2741,7 +2741,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -2775,7 +2775,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2860,7 +2860,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -2894,7 +2894,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -2979,7 +2979,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3013,7 +3013,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -3098,7 +3098,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3130,7 +3130,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -3215,7 +3215,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3243,7 +3243,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -3328,7 +3328,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3360,7 +3360,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -3445,7 +3445,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3477,7 +3477,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -3556,13 +3556,13 @@
     "clone_url": "https://github.com/Railway-Op-Sim/railostools.git",
     "svn_url": "https://github.com/Railway-Op-Sim/railostools",
     "homepage": "",
-    "size": 950,
+    "size": 951,
     "stargazers_count": 4,
     "watchers_count": 4,
     "language": "Python",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3594,7 +3594,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -3679,7 +3679,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3711,7 +3711,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -3796,7 +3796,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3828,7 +3828,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -3913,7 +3913,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -3945,7 +3945,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4030,7 +4030,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -4064,7 +4064,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4149,7 +4149,7 @@
     "language": "Java",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -4177,7 +4177,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4262,7 +4262,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -4294,7 +4294,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4379,7 +4379,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -4411,7 +4411,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4496,7 +4496,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -4530,7 +4530,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4615,7 +4615,7 @@
     "language": "C++",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": true,
     "has_discussions": false,
@@ -4647,7 +4647,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4732,7 +4732,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -4766,7 +4766,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4851,7 +4851,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -4885,7 +4885,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -4970,7 +4970,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -5004,7 +5004,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -5089,7 +5089,7 @@
     "language": "Python",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -5121,7 +5121,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -5206,7 +5206,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -5238,7 +5238,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -5323,7 +5323,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -5355,7 +5355,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -5440,7 +5440,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -5472,7 +5472,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -5557,7 +5557,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -5589,7 +5589,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -5674,7 +5674,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -5706,7 +5706,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -5791,7 +5791,7 @@
     "language": "JavaScript",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": true,
     "has_discussions": false,
@@ -5823,7 +5823,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -5908,7 +5908,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -5940,7 +5940,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6025,7 +6025,7 @@
     "language": "PowerShell",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -6054,7 +6054,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6139,7 +6139,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -6171,7 +6171,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6256,7 +6256,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -6288,7 +6288,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6373,7 +6373,7 @@
     "language": "JavaScript",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": true,
     "has_discussions": false,
@@ -6405,7 +6405,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6490,7 +6490,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -6522,7 +6522,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6607,7 +6607,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -6639,7 +6639,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6724,7 +6724,7 @@
     "language": "Python",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -6750,7 +6750,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6835,7 +6835,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -6867,7 +6867,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -6952,7 +6952,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -6984,7 +6984,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -7069,7 +7069,7 @@
     "language": "NSIS",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -7101,7 +7101,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -7186,7 +7186,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -7218,7 +7218,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -7303,7 +7303,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -7335,7 +7335,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -7420,7 +7420,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -7452,7 +7452,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -7537,7 +7537,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -7569,7 +7569,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -7648,13 +7648,13 @@
     "clone_url": "https://github.com/Railway-Op-Sim/GB-Alton.git",
     "svn_url": "https://github.com/Railway-Op-Sim/GB-Alton",
     "homepage": null,
-    "size": 46,
+    "size": 47,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -7686,7 +7686,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -7771,7 +7771,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -7803,7 +7803,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -7888,7 +7888,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -7920,7 +7920,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8005,7 +8005,7 @@
     "language": "Rust",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8037,7 +8037,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8122,7 +8122,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8154,7 +8154,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8239,7 +8239,7 @@
     "language": null,
     "has_issues": false,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8271,7 +8271,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8356,7 +8356,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8388,7 +8388,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8473,7 +8473,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8505,7 +8505,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8584,13 +8584,13 @@
     "clone_url": "https://github.com/Railway-Op-Sim/GB-Blackpool.git",
     "svn_url": "https://github.com/Railway-Op-Sim/GB-Blackpool",
     "homepage": null,
-    "size": 50,
+    "size": 53,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8622,7 +8622,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8707,7 +8707,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8739,7 +8739,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8824,7 +8824,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8856,7 +8856,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -8941,7 +8941,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -8973,7 +8973,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9058,7 +9058,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -9090,7 +9090,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9175,7 +9175,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -9207,7 +9207,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9286,13 +9286,13 @@
     "clone_url": "https://github.com/Railway-Op-Sim/GB-Airedale-Wharfedale-Lines-Shipley-Triangle.git",
     "svn_url": "https://github.com/Railway-Op-Sim/GB-Airedale-Wharfedale-Lines-Shipley-Triangle",
     "homepage": null,
-    "size": 78,
+    "size": 79,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -9324,7 +9324,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9409,7 +9409,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -9441,7 +9441,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9526,7 +9526,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -9558,7 +9558,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9643,7 +9643,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -9675,7 +9675,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9760,7 +9760,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -9792,7 +9792,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9877,7 +9877,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -9909,7 +9909,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -9994,7 +9994,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": false,
     "has_pages": false,
     "has_discussions": false,
@@ -10026,7 +10026,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -10105,13 +10105,13 @@
     "clone_url": "https://github.com/Railway-Op-Sim/GB-Bath-Spa-Area.git",
     "svn_url": "https://github.com/Railway-Op-Sim/GB-Bath-Spa-Area",
     "homepage": null,
-    "size": 62,
+    "size": 63,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -10143,7 +10143,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -10228,7 +10228,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -10260,7 +10260,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -10345,7 +10345,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -10377,7 +10377,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -10462,7 +10462,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -10494,7 +10494,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -10579,7 +10579,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -10611,7 +10611,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -10696,7 +10696,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -10728,7 +10728,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -10813,7 +10813,7 @@
     "language": "Inno Setup",
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -10839,7 +10839,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -10924,7 +10924,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": false,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": false,
     "has_pages": false,
     "has_discussions": false,
@@ -10956,7 +10956,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -11041,7 +11041,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -11073,7 +11073,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -11158,7 +11158,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -11190,7 +11190,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -11275,7 +11275,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -11307,7 +11307,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -11392,7 +11392,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -11424,7 +11424,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -11509,7 +11509,7 @@
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -11541,7 +11541,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   },
@@ -11620,13 +11620,13 @@
     "clone_url": "https://github.com/Railway-Op-Sim/GB-Arun-Valley-Line.git",
     "svn_url": "https://github.com/Railway-Op-Sim/GB-Arun-Valley-Line",
     "homepage": null,
-    "size": 62,
+    "size": 63,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": null,
     "has_issues": true,
     "has_projects": true,
-    "has_downloads": true,
+    "has_downloads": false,
     "has_wiki": true,
     "has_pages": false,
     "has_discussions": false,
@@ -11658,7 +11658,7 @@
       "maintain": false,
       "push": false,
       "triage": false,
-      "pull": true
+      "pull": false
     },
     "custom_properties": {}
   }

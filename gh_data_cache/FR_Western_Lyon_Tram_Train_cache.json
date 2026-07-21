@@ -1,10 +1,10 @@
 [
   {
-    "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Alton/releases/356990167",
-    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Alton/releases/356990167/assets",
-    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/GB-Alton/releases/356990167/assets{?name,label}",
-    "html_url": "https://github.com/Railway-Op-Sim/GB-Alton/releases/tag/v1.0.0",
-    "id": 356990167,
+    "url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/276255008",
+    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/276255008/assets",
+    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/276255008/assets{?name,label}",
+    "html_url": "https://github.com/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/tag/v1.0.0",
+    "id": 276255008,
     "author": {
       "login": "github-actions[bot]",
       "id": 41898282,
@@ -26,22 +26,22 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "node_id": "RE_kwDOIvaY8M4VRzzX",
+    "node_id": "RE_kwDOQ1m4a84Qd1Eg",
     "tag_name": "v1.0.0",
     "target_commitish": "main",
-    "name": "Railway-Op-Sim/GB-Alton Release v1.0.0",
+    "name": "Railway-Op-Sim/FR-Western-Lyon-Tram-Train Release v1.0.0",
     "draft": false,
     "immutable": false,
     "prerelease": false,
-    "created_at": "2026-07-20T20:56:51Z",
-    "updated_at": "2026-07-20T20:57:31Z",
-    "published_at": "2026-07-20T20:57:30Z",
+    "created_at": "2026-01-13T07:16:14Z",
+    "updated_at": "2026-01-13T07:17:03Z",
+    "published_at": "2026-01-13T07:17:03Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Alton/releases/assets/483898922",
-        "id": 483898922,
-        "node_id": "RA_kwDOIvaY8M4c17Yq",
-        "name": "Alton_v1_0_0.zip",
+        "url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/assets/339828570",
+        "id": 339828570,
+        "node_id": "RA_kwDOQ1m4a84UQV9a",
+        "name": "Western-Lyon-Tram-Train_v1_0_0.zip",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -66,16 +66,16 @@
         },
         "content_type": "application/zip",
         "state": "uploaded",
-        "size": 72587,
-        "digest": "sha256:0b49167ce90393049c092d63b57432242e59586c8c2e05d69dc4ff4c385c126d",
-        "download_count": 28,
-        "created_at": "2026-07-20T20:57:30Z",
-        "updated_at": "2026-07-20T20:57:31Z",
-        "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Alton/releases/download/v1.0.0/Alton_v1_0_0.zip"
+        "size": 93673,
+        "digest": "sha256:fc8432cacdb1b9566cc222cf18032b897b1951bc28eb7859251784224773950e",
+        "download_count": 49,
+        "created_at": "2026-01-13T07:17:03Z",
+        "updated_at": "2026-01-13T07:17:03Z",
+        "browser_download_url": "https://github.com/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/download/v1.0.0/Western-Lyon-Tram-Train_v1_0_0.zip"
       }
     ],
-    "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Alton/tarball/v1.0.0",
-    "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Alton/zipball/v1.0.0",
+    "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/tarball/v1.0.0",
+    "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/zipball/v1.0.0",
     "body": ""
   }
 ]
