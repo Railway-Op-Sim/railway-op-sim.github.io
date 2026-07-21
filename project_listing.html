@@ -8,6 +8,7 @@
 
   <!-- Move from the Django template tag to a clean web path -->
   <script src="/static/colour-modes.js"></script>
+  <script src="/static/copy-button.js"></script>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -147,12 +148,12 @@
 
 <br>
 
-<div class="accordion" id="projectListing">
+<div class="accordion accordion-flush mx-auto" id="projectListing" style="max-width: 1300px;">
     
     <div class="accordion-item">
         <h2 id="heading1" class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse1" aria-expanded="true"
+            <button class="accordion-button " type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="True"
                 aria-controls="collapse1">
                 Fictional
             </button>
@@ -174,7 +175,8 @@
                                 <p class="card-text">A casual fun simulation to celebrate Christmas 2022</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/christmas_2022.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/christmas_2022.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -187,8 +189,8 @@
     
     <div class="accordion-item">
         <h2 id="heading2" class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse2" aria-expanded=""
+            <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="False"
                 aria-controls="collapse2">
                 France
             </button>
@@ -210,7 +212,8 @@
                                 <p class="card-text">Representation of the Western Lyon Tram-Train network.</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/western_lyon_tram_train.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/western_lyon_tram_train.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -223,8 +226,8 @@
     
     <div class="accordion-item">
         <h2 id="heading3" class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse3" aria-expanded=""
+            <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="False"
                 aria-controls="collapse3">
                 Iran
             </button>
@@ -246,7 +249,8 @@
                                 <p class="card-text">Simulation of the Mashhad Urban Railway network in Mashhad, Iran</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/mashhad_urban_railway.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/mashhad_urban_railway.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -259,8 +263,8 @@
     
     <div class="accordion-item">
         <h2 id="heading4" class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse4" aria-expanded=""
+            <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="False"
                 aria-controls="collapse4">
                 Portugal
             </button>
@@ -282,7 +286,8 @@
                                 <p class="card-text">Simulation of the Algave Line in the South of Portugal</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/linha_do_algarve.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/linha_do_algarve.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -295,8 +300,8 @@
     
     <div class="accordion-item">
         <h2 id="heading5" class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse5" aria-expanded=""
+            <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="False"
                 aria-controls="collapse5">
                 Puerto Rico
             </button>
@@ -318,7 +323,8 @@
                                 <p class="card-text">Tren Urbano transit system in San Juan, Puerto Rico</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/tren_urbano_san_juan.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/tren_urbano_san_juan.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -331,8 +337,8 @@
     
     <div class="accordion-item">
         <h2 id="heading6" class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse6" aria-expanded=""
+            <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="False"
                 aria-controls="collapse6">
                 United Kingdom
             </button>
@@ -347,14 +353,15 @@
                         <div class="card h-100">
                             
                             <img class="card-img-top" src="/media/project_images/Arun_Valley_Line.bmp"
-                                style="height: 180px; object-fit: cover;" alt="Arun_Valley_Line">
+                                style="height: 180px; object-fit: cover;" alt="Arun Valley Line">
                             
                             <div class="card-body">
-                                <h5 class="card-title">Arun_Valley_Line</h5>
+                                <h5 class="card-title">Arun Valley Line</h5>
                                 <p class="card-text">The Arun Valley Line between Crawley and Arundel</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/arun_valley_line.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/arun_valley_line.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -372,7 +379,8 @@
                                 <p class="card-text">Lines to Blackpool North and Blackpool South</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/blackpool.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/blackpool.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -390,7 +398,8 @@
                                 <p class="card-text">A simulation of the suburban rail network around the Scottish city of Glasgow, UK</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/glasgow_suburban.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/glasgow_suburban.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -408,7 +417,8 @@
                                 <p class="card-text">The Merseyrail Network controlled by Sandhills IECC and a few PSB's.</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/merseyrail.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/merseyrail.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -426,7 +436,8 @@
                                 <p class="card-text">Representation of the North London, West London & Gospel Oak to Barking Lines operated by London Overground</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/north_london_line.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/north_london_line.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -444,7 +455,8 @@
                                 <p class="card-text">Simulation of Shrewsbury railway station in Shropshire, UK</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/shrewsburyuk.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/shrewsburyuk.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -462,7 +474,8 @@
                                 <p class="card-text">A branch line off of the Great Eastern Main Line in Essex, UK, connecting the town of Colchester with the coast at Clacton-on-Sea and Walton-on-the-Naze</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/sunshine_coast_lineessexuk.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/sunshine_coast_lineessexuk.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -480,7 +493,8 @@
                                 <p class="card-text">A simulation of commuter routes in South-West London</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/suttonepsom_and_wimbledon.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/suttonepsom_and_wimbledon.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -498,7 +512,8 @@
                                 <p class="card-text">Simulation of Wolverhampton, UK in March 2025</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/wolverhampton.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/wolverhampton.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -516,7 +531,8 @@
                                 <p class="card-text">Simulation of the area around Worcester, UK</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/worcester_region.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/worcester_region.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
@@ -529,8 +545,8 @@
     
     <div class="accordion-item">
         <h2 id="heading7" class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse7" aria-expanded=""
+            <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="False"
                 aria-controls="collapse7">
                 United States
             </button>
@@ -552,7 +568,8 @@
                                 <p class="card-text">Simulation of the Chicago L Train network</p>
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/chicago_l_train.html" class="btn btn-secondary w-100">More
+                                <a href="/projects/chicago_l_train.html"
+                                    class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
                         </div>
