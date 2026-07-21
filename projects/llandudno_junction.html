@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Move from the Django template tag to a clean web path -->
+  <script src="/static/colour-modes.js"></script>
+  <script src="/static/copy-button.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Railway Operation Simulator</title>
+</head>
+
+<body>
+  <style>
+    .main {
+      width: 90%;
+      font-family: Arial;
+    }
+
+    .include-font {
+      font-family: Arial;
+    }
+
+    .navbar-brand {
+      padding: 0px;
+      /* firefox bug fix */
+    }
+
+    .navbar-brand>img {
+      height: 100px;
+      padding: 20px;
+      /* firefox bug fix */
+      width: 100px;
+    }
+  </style>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <nav class="navbar navbar-expand-md include-font">
+    <div class="d-flex">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+        aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="d-flex d-md-none mx-2" role="search" action="/search" method="get">
+        <input class="form-control me-2" type="search" name="name" placeholder="Search" aria-label="Search">
+        <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
+      <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex d-md-none align-items-center show"
+        id="bd-theme" type="button" aria-expanded="true" data-bs-toggle="dropdown" data-bs-display="static">
+        <span class="ms-2">☀/🌙</span>
+      </button>
+    </div>
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <a class="nav-item d-none d-md-inline" href="/index.html"></a>
+        <img src="/media/RailOSLogo_dark.svg" alt="Logo" width="40" class="d-inline-block m-2" id="base_railos_logo">
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">News</a>
+          </li> -->
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Features</a></li>
+              <li><a class="dropdown-item" href="#">Screenshots</a></li>
+              <li><a class="dropdown-item" href="#">Version History</a></li>
+              <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+            </ul>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Downloads
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="/program_download.html">Main Program</a></li>
+              <li><a class="dropdown-item" href="/project_listing.html">Community Projects</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Community</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Development
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="https://github.com/AlbertBall/railway-dot-exe">Source Code</a></li>
+              <li><a class="dropdown-item" href="https://github.com/Railway-Op-Sim">GitHub Community</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <form class="d-none d-md-flex" role="search" action="/project_search.html" method="get">
+        <input class="form-control me-2" type="search" name="name" placeholder="Search" aria-label="Search">
+        <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
+      <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-none d-md-flex align-items-center"
+        id="bd-theme" type="button" aria-expanded="true" data-bs-toggle="dropdown" data-bs-display="static">
+        <span class="ms-2">☀/🌙</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;"
+        data-bs-popper="static">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+            Light
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark">
+            Dark
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+            Auto
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="col main w-100">
+    
+
+<br>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col d-block d-sm-none mb-4">
+            
+            <img class="img-fluid" src="/media/project_images/LJMapImage.bmp" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col align-items-end d-none d-sm-block">
+            
+            <img class="d-inline-block align-text-top img-fluid" src="/media/project_images/LJMapImage.bmp" alt="">
+        </div>
+        <div class="col text-start">
+            <p class="lead">
+                Llandudno Junction
+            </p>
+            <p>
+                This is a small simulation representating the area around Llandudno Junction in North Wales, UK.
+            </p>
+            <p class="text-body-secondary">
+                sha256:8c798e50c35b14b3c564817fc9b4b820ba676f496825fce5b166aed6e7b1651b
+            </p>
+            <div class="card-body">
+                <a href="https://github.com/Railway-Op-Sim/GB-LlandudnoJct/releases/download/v1.0.0/LlandudnoJct_v1_0_0.zip" class="btn btn-secondary">Download v1.0.0</a>
+                <a href="https://github.com/Railway-Op-Sim/GB-LlandudnoJct/"
+                    class="btn btn-secondary d-inline-flex align-items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<br>
+
+
+  </div>
+  </center>
+
+  <!-- Footer -->
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <!-- Add list items here for links in footer -->
+      </ul>
+      <p class="text-center text-muted">&copy;  Railway Operation Simulator. Website designed by
+        Daniel Gill & Kristian Zarebski. </p>
+    </footer>
+  </div>
+</body>
+
+</html>
