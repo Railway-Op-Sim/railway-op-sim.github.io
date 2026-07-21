@@ -15,9 +15,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-railostools = { git = "https://github.com/Railway-Op-Sim/railostools.git", subdirectory = "python" }
+railostools = { git = "https://github.com/Railway-Op-Sim/railostools.git", subdirectory = "python", rev = "d4ab600d024232892944fa16d79357aaaf097404" }
 
 [dependency-groups]
-dev = [
-    "httpserver>=1.1.0",
-]
+dev = ["httpserver>=1.1.0"]

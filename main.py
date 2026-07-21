@@ -1,4 +1,3 @@
-from ast import arg
 import datetime
 import jinja2
 import pathlib
@@ -27,14 +26,14 @@ def render_page(
     _destination.mkdir(exist_ok=True)
 
     with _destination.joinpath(file_name or page).open("w", encoding="utf-8") as out_f:
-        out_f.write(_output)
+        _ = out_f.write(_output)
 
 
 if __name__ in "__main__":
     import argparse
 
     _parser = argparse.ArgumentParser()
-    _parser.add_argument(
+    _ = _parser.add_argument(
         "--token", "-t", type=str, default=None, help="Provide GH API token"
     )
     _args = _parser.parse_args()
@@ -65,15 +64,16 @@ if __name__ in "__main__":
                 file_name_64bit="x64",
                 discord_server_invite="https://discord.gg/FmE8dxN",
             )
-        for project_name, project in _project_data.projects.items():
-            render_page(
-                "project_detail.html",
-                destination=pathlib.Path(__file__)
-                .parent.joinpath("dist")
-                .joinpath("projects"),
-                template_dir=_templates,
-                file_name=f"{project.websafe_name}.html",
-                project_data=_project_data,
-                program_releases=_program_releases,
-                project=project,
-            )
+        for country_projects in _project_data.projects.values():
+            for project_name, project in country_projects.items():
+                render_page(
+                    "project_detail.html",
+                    destination=pathlib.Path(__file__)
+                    .parent.joinpath("dist")
+                    .joinpath("projects"),
+                    template_dir=_templates,
+                    file_name=f"{project.websafe_name}.html",
+                    project_data=_project_data,
+                    program_releases=_program_releases,
+                    project=project,
+                )

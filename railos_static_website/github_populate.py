@@ -1,3 +1,7 @@
+import pycountry
+from requests.models import Response
+
+
 import http
 import datetime
 import semver
@@ -6,7 +10,6 @@ from railos_static_website.utilities import hash_file
 
 import requests
 import typing
-import logging
 import re
 import os
 import pathlib
@@ -36,6 +39,10 @@ class GitHubRailOSProjectData:
         self, destination: pathlib.Path, user_name: str, api_token: str | None
     ) -> None:
         super().__init__()
+        self._error_log: pathlib.Path = pathlib.Path(__file__).parent.joinpath(
+            "project_errors.log"
+        )
+        self._error_log.unlink(missing_ok=True)
         self._repo_list: list[dict[str, str]] = []
         self._release_list: dict[str, list[str]] = {}
         self._params: dict[str, int] = {"per_page": 100}
@@ -49,7 +56,12 @@ class GitHubRailOSProjectData:
         self._retrieve_or_get_metadata(user_name, _cache_file)
         self._filter_to_project_repos()
         self._filter_to_released_projects(_data_cache)
-        self.projects: dict[semver.Version, Project] = self._build_versions()
+        self.projects: dict[str, dict[str, Project]] = self._build_versions()
+
+    def error(self, msg: str) -> None:
+        print(f"WARNING: {msg}")
+        with self._error_log.open("a") as out_f:
+            _ = out_f.write(msg)
 
     def _retrieve_or_get_metadata(
         self, user_name: str, cache_file: pathlib.Path
@@ -69,15 +81,21 @@ class GitHubRailOSProjectData:
         if self._api_token:
             print("Using API Token")
             self._headers = {"Authorization": f"Bearer {self._api_token}"}
-        page = 1
+        page = 0
+        next_page: str = f"{_org_repos_url}?page=1"
 
         while True:
+            print(f"Getting page {next_page}")
 
-            _org_repos = requests.get(
-                _org_repos_url,
+            _org_repos: Response = requests.get(
+                next_page,
                 params=self._params | {"page": page},
                 headers=self._headers,
             )
+            _new_page = _org_repos.links.get("next", {}).get("url")
+            if _new_page == next_page:
+                break
+            next_page = _new_page
 
             if _org_repos.status_code != 200:
                 raise RuntimeError(
@@ -86,18 +104,15 @@ class GitHubRailOSProjectData:
                     + f"returned status code {_org_repos.status_code}"
                 )
 
-            if not _org_repos:
-                break
-
             cache_file.parent.mkdir(exist_ok=True)
 
             with cache_file.open("w") as out_file:
                 json.dump(_org_repos.json(), out_file, indent=2)
 
             self._repo_list += _org_repos.json()
-            page += 1
 
     def _filter_to_project_repos(self) -> None:
+        print("Filtering project repositories.")
         _permitted_country_codes: list[str] = ["FN"] + [i.alpha_2 for i in countries]
         _name_check_regex = r"^(\w{2})-.+$"
 
@@ -106,13 +121,13 @@ class GitHubRailOSProjectData:
         for result in self._repo_list or []:
             # look for valid repository names
             if not (iso2 := re.findall(_name_check_regex, result["name"])):
-                print(
-                    f"WARNING: Skipping repository '{result['name']}' as name not a valid project repository"
+                self.error(
+                    f"Skipping repository '{result['name']}' as name not a valid project repository"
                 )
                 continue
             if iso2[0] not in _permitted_country_codes:
-                print(
-                    f"WARNING: Skipping repository '{result['name']}' as country code '{iso2[0]}' not valid"
+                self.error(
+                    f"Skipping repository '{result['name']}' as country code '{iso2[0]}' not valid"
                 )
                 continue
             _storables.append(result)
@@ -123,6 +138,7 @@ class GitHubRailOSProjectData:
             raise RuntimeError("No results retrieved after project filter applied")
 
     def _filter_to_released_projects(self, data_cache: pathlib.Path) -> None:
+        print("Filtering on releases.")
         _release_results = []
         for result in self._repo_list or []:
             _json_file: pathlib.Path = data_cache.joinpath(
@@ -141,7 +157,7 @@ class GitHubRailOSProjectData:
             if _releases_req.status_code != http.HTTPStatus.OK or not (
                 _release_json := _releases_req.json()
             ):
-                print(f"Skipping {result['name']} as no releases.")
+                self.error(f"Skipping {result['name']} as no releases.")
                 continue
             self._release_list[result["name"]] = _release_json
 
@@ -167,7 +183,7 @@ class GitHubRailOSProjectData:
                 with zipfile.ZipFile(_download_loc) as z_out:
                     z_out.extractall(_out_zip)
             except Exception:
-                print(f"WARNING: Failed to extract zip file '{_download_loc}'")
+                self.error(f"Failed to extract zip file '{_download_loc}'")
                 return {}, {}, ""
             _metadata_files = glob.glob(
                 os.path.join(_out_zip, "**", "*.toml"), recursive=True
@@ -177,7 +193,7 @@ class GitHubRailOSProjectData:
                 os.makedirs(MEDIA_DIRECTORY)
 
             if not _metadata_files:
-                print(
+                self.error(
                     f"WARNING: Failed to obtain metadata for project from '{download_url}'"
                 )
                 print(f"Package contents: {os.listdir(_out_zip)}")
@@ -188,8 +204,8 @@ class GitHubRailOSProjectData:
             try:
                 validate(_metadata_file)
             except Exception as e:
-                print(
-                    f"WARNING: Metadata validation failed for project from '{download_url}'"
+                self.error(
+                    f"WARNING: Metadata validation failed for project from '{download_url}':\n{e}"
                 )
                 print(f"Validation returned: {e}")
                 return {}, {}, ""
@@ -210,7 +226,11 @@ class GitHubRailOSProjectData:
                 )
                 _image_local_data = "/".join(["/media/project_images", _image_file])
             except IndexError:
-                _image_local_data = ""
+                self.error(
+                    f"Failed to get local image data for '{_metadata["name"]}'. "
+                    + f"Expected file '{_image_file}' in Images folder of archive, but this does not exist."
+                )
+                return {}, {}, ""
 
             _hash = hash_file(f"{_download_loc}")
 
@@ -242,11 +262,13 @@ class GitHubRailOSProjectData:
             _year: int = metadata["year"]
             _country_code: str = metadata["country_code"]
         except KeyError as e:
-            print(f"WARNING: Cannot store project '{_name}', missing metadata.")
-            print(f"Missing key: {e}")
+            self.error(
+                f"Cannot store project '{_name}', missing metadata. Missing key: {e}"
+            )
             return
 
         if not _name:
+            self.error(f"Metadata '{metadata}' has empty name.")
             raise ValueError("Expected name for project.")
 
         return Project(
@@ -260,17 +282,18 @@ class GitHubRailOSProjectData:
             versions={},
         )
 
-    def _build_versions(self) -> dict[str, Project]:
-        _projects: dict[str, Project] = {}
+    def _build_versions(self) -> dict[str, dict[str, Project]]:
+        _projects: dict[str, dict[str, Project]] = {}
         for repository in self._repo_list:
             _releases: list[dict[str, str]] = self._release_list[repository["name"]]
 
             _project: Project | None = None
+            _project_name: str | None = None
 
             for release in _releases:
                 if not (_assets := release["assets"]):
-                    print(
-                        f"WARNING: Ignoring '{release['tag_name']}' for '{release['name']}' as no assets available."
+                    self.error(
+                        f"Ignoring '{release['tag_name']}' for '{release['name']}' as no assets available."
                     )
                     continue
                 _meta_data, _file_data, _image_data = self._get_file_metadata(
@@ -279,15 +302,24 @@ class GitHubRailOSProjectData:
                 if not _meta_data:
                     continue
                 _storage = self._build_file_storage(_file_data)
+                _project_name_search = re.match(
+                    r"\/(\w{2}-.*)\/", _assets[0]["browser_download_url"]
+                )
                 _contributors: list[str] = _meta_data.get("contributors", [])
                 _author: str = _meta_data["author"]
                 if not _project:
                     _project = self._build_project(_meta_data, author=_author)
                     if not _project:
                         continue
+                _project_name = _project.websafe_name
+                if _project_name_search:
+                    _project_name = _project_name_search[1]
                 print(
                     f"Creating version '{_meta_data['version']}' for '{_project.name}'"
                 )
+                _project_name = _project_name.replace("_", "")
+                if not _project_name:
+                    continue
                 _prog_min_version: str | None = _meta_data.get("minimum_required")
                 _version = Version(
                     semantic_version=semver.Version.parse(_meta_data["version"]),
@@ -303,10 +335,21 @@ class GitHubRailOSProjectData:
                     download_url=_storage,
                     image_url=_image_data,
                     contributors=_contributors,
-                    project_name=_project.name,
+                    project_name=_project_name,
                 )
                 _project.versions[_version.semantic_version] = _version
-            if _project:
-                _projects[_project.websafe_name] = _project
+            if _project and _project_name:
+                if _project.country_code == "FN":
+                    _country = "Fictional"
+                else:
+                    _country_res = pycountry.countries.get(
+                        alpha_2=_project.country_code
+                    )
+                    if hasattr(_country_res, "common_name"):
+                        _country = _country_res.common_name
+                    else:
+                        _country = _country_res.name
+                _ = _projects.setdefault(_country, {})
+                _projects[_country][_project_name] = _project
 
         return _projects
