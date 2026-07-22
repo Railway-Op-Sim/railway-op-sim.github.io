@@ -1,10 +1,10 @@
 [
   {
-    "url": "https://api.github.com/repos/Railway-Op-Sim/GB-ValleyLines/releases/357605538",
-    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/GB-ValleyLines/releases/357605538/assets",
-    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/GB-ValleyLines/releases/357605538/assets{?name,label}",
-    "html_url": "https://github.com/Railway-Op-Sim/GB-ValleyLines/releases/tag/v1.0.1",
-    "id": 357605538,
+    "url": "https://api.github.com/repos/Railway-Op-Sim/JP-Enoshima-Railway/releases/358187369",
+    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/JP-Enoshima-Railway/releases/358187369/assets",
+    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/JP-Enoshima-Railway/releases/358187369/assets{?name,label}",
+    "html_url": "https://github.com/Railway-Op-Sim/JP-Enoshima-Railway/releases/tag/v1.0.0",
+    "id": 358187369,
     "author": {
       "login": "github-actions[bot]",
       "id": 41898282,
@@ -26,22 +26,22 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "node_id": "RE_kwDODjKGIM4VUKCi",
-    "tag_name": "v1.0.1",
+    "node_id": "RE_kwDOGDrolc4VWYFp",
+    "tag_name": "v1.0.0",
     "target_commitish": "main",
-    "name": "Railway-Op-Sim/GB-ValleyLines Release v1.0.1",
+    "name": "Railway-Op-Sim/JP-Enoshima-Railway Release v1.0.0",
     "draft": false,
     "immutable": false,
     "prerelease": false,
-    "created_at": "2026-07-21T20:01:04Z",
-    "updated_at": "2026-07-21T20:01:58Z",
-    "published_at": "2026-07-21T20:01:58Z",
+    "created_at": "2026-07-22T17:10:15Z",
+    "updated_at": "2026-07-22T17:11:15Z",
+    "published_at": "2026-07-22T17:11:15Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/Railway-Op-Sim/GB-ValleyLines/releases/assets/485100172",
-        "id": 485100172,
-        "node_id": "RA_kwDODjKGIM4c6gqM",
-        "name": "ValleyLines_v1_0_1.zip",
+        "url": "https://api.github.com/repos/Railway-Op-Sim/JP-Enoshima-Railway/releases/assets/486206664",
+        "id": 486206664,
+        "node_id": "RA_kwDOGDrolc4c-uzI",
+        "name": "Enoshima-Railway_v1_0_0.zip",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -66,16 +66,16 @@
         },
         "content_type": "application/zip",
         "state": "uploaded",
-        "size": 399643,
-        "digest": "sha256:ac7cf3888ceaaa6a93901490d396aea9387f0c24cd64622ceb8741ff8ba3af9f",
-        "download_count": 25,
-        "created_at": "2026-07-21T20:01:58Z",
-        "updated_at": "2026-07-21T20:01:58Z",
-        "browser_download_url": "https://github.com/Railway-Op-Sim/GB-ValleyLines/releases/download/v1.0.1/ValleyLines_v1_0_1.zip"
+        "size": 95275,
+        "digest": "sha256:9b472e04ac2dcee8951cdb91aa3db5d3fdb05ddef50c44055b579d189a231417",
+        "download_count": 0,
+        "created_at": "2026-07-22T17:11:14Z",
+        "updated_at": "2026-07-22T17:11:15Z",
+        "browser_download_url": "https://github.com/Railway-Op-Sim/JP-Enoshima-Railway/releases/download/v1.0.0/Enoshima-Railway_v1_0_0.zip"
       }
     ],
-    "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/GB-ValleyLines/tarball/v1.0.1",
-    "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/GB-ValleyLines/zipball/v1.0.1",
+    "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/JP-Enoshima-Railway/tarball/v1.0.0",
+    "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/JP-Enoshima-Railway/zipball/v1.0.0",
     "body": null
   }
 ]

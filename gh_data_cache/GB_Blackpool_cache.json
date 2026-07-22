@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 82675,
         "digest": "sha256:a210906f3bfbb5f04e27093e50dc38658ffafc316fc271d2fe15321783bbdf73",
-        "download_count": 61,
+        "download_count": 64,
         "created_at": "2026-07-20T21:28:51Z",
         "updated_at": "2026-07-20T21:28:52Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Blackpool/releases/download/v1.0.0/Blackpool_v1_0_0.zip"

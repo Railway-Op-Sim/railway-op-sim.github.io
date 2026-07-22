@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 119862,
         "digest": "sha256:b78fd01c8ba509041e6fb95cb46cfc1afa0ea067e6dcce20cc5c7ead69dca942",
-        "download_count": 59,
+        "download_count": 62,
         "created_at": "2026-07-20T20:56:52Z",
         "updated_at": "2026-07-20T20:56:52Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Arun-Valley-Line/releases/download/v1.0.0/Arun-Valley-Line_v1_0_0.zip"
