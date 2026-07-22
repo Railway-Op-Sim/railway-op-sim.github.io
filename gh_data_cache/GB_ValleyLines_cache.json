@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 399643,
         "digest": "sha256:ac7cf3888ceaaa6a93901490d396aea9387f0c24cd64622ceb8741ff8ba3af9f",
-        "download_count": 3,
+        "download_count": 22,
         "created_at": "2026-07-21T20:01:58Z",
         "updated_at": "2026-07-21T20:01:58Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-ValleyLines/releases/download/v1.0.1/ValleyLines_v1_0_1.zip"
