@@ -64,6 +64,22 @@ class GitHubRailOSProjectData:
         with self._error_log.open("a") as out_f:
             _ = out_f.write(msg)
 
+    @property
+    def latest_projects(self) -> dict[str, Version]:
+        _all: dict[str, Version] = {}
+        for country_data in self.projects.values():
+            for project in country_data.values():
+                _all[f"{project.display_name}"] = list(
+                    sorted(project.versions.items(), key=lambda i: i[1].release_date)
+                )[0][1]
+        _all = dict(sorted(_all.items(), key=lambda i: i[1].release_date))
+        _out: dict[str, Version] = {}
+        for i, (key, value) in enumerate(_all.items()):
+            if i == 5:
+                break
+            _out[key] = value
+        return _out
+
     def _retrieve_or_get_metadata(
         self, user_name: str, cache_file: pathlib.Path
     ) -> None:
@@ -278,7 +294,7 @@ class GitHubRailOSProjectData:
 
         return Project(
             name=_name.replace("_", " "),
-            display_name=_display_name or _name,
+            display_name=(_display_name or _name).replace("_", " "),
             factual=_factual,
             description=_description,
             year=_year,

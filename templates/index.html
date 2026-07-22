@@ -132,21 +132,21 @@
       <div class="col">
         <h3 class="m-3">Recent Community Projects</h3>
         <div class="row row-cols-1 row-cols-sm-2">
-          {% for version in latest_projects %}
-          <div class="col">
-            <div class="card mb-4">
-              <div class="card-body">
-                <img class="card-img-top" src="{{ version.image_url }}" alt="">
-                <h5 class="card-title">{{ version.project.name }}</h5>
-                <p class="card-text">{{ version.project.description }}</p>
-                <a href="/projects/{{ version.project.id }}.html" class="btn btn-secondary">More Info</a>
-              </div>
+          {% for name, version in (latest_projects.items() | list)[:4] %}
+          <div class="card h-100 shadow-sm border-0 rounded-3">
+            <div class="card-body d-flex flex-column justify-content-between p-4">
+              <h5 class="card-title fw-bold mb-3">{{ name }}</h5>
+              <h6>
+                <it>{{ version.author }}</it>
+              </h6>
+              <a href="/projects/{{ version.websafe_name }}.html" class="btn btn-secondary w-100">More Info</a>
             </div>
-            {% endfor %}
           </div>
+          {% endfor %}
         </div>
       </div>
     </div>
+  </div>
 </center>
 
 

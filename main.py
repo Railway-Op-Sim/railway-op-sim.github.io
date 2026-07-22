@@ -59,6 +59,7 @@ if __name__ in "__main__":
                 latest_version=_program_releases.program_versions[_versions[-1]],
                 penultimate_version=_program_releases.program_versions[_versions[-2]],
                 projects=_project_data.projects,
+                latest_projects=_project_data.latest_projects,
                 current_year=datetime.datetime.now(tz=datetime.UTC).strftime("%Y"),
                 file_name_32bit="x86",
                 file_name_64bit="x64",
