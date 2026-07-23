@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 184922,
         "digest": null,
-        "download_count": 176,
+        "download_count": 178,
         "created_at": "2021-11-24T19:54:34Z",
         "updated_at": "2021-11-24T19:54:35Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-LeedsAndBradford/releases/download/v1.0/LeedsBradford.zip"
@@ -147,7 +147,7 @@
         "state": "uploaded",
         "size": 87081,
         "digest": null,
-        "download_count": 172,
+        "download_count": 174,
         "created_at": "2021-11-23T13:24:38Z",
         "updated_at": "2021-11-23T13:24:39Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-LeedsAndBradford/releases/download/v1.beta/LeedsBradford.zip"

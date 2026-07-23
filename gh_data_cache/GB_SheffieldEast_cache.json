@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 84432,
         "digest": "sha256:681ec5dadb278db546957bf59e299a472cbe6b836de9afeb30ff10666a942fc5",
-        "download_count": 2,
+        "download_count": 4,
         "created_at": "2026-07-22T17:05:05Z",
         "updated_at": "2026-07-22T17:05:06Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-SheffieldEast/releases/download/v1.0.0/SheffieldEast_v1_0_0.zip"
