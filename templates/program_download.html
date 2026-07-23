@@ -48,7 +48,7 @@
                     </tr>
                 </tbody>
             </table>
-            <!-- <p>Installers:</p>
+            <p>Installers:</p>
             <table class="table table-sm">
                 <thead>
                     <tr>
@@ -59,12 +59,13 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Windows 32-bit & 64-bit</td>
-                        <td></td>
-                        <td>{{ latest_windows_installer | default("-") }}</td>
+                        {% set first_installer = installers[(installers.keys() | sort(reverse=true) | list)[0]] %}
+                        <td>Windows 64-bit</td>
+                        <td>{{ first_installer.download_url.sha256_hash }}</td>
+                        <td><a href="{{first_installer.download_url}}" style="text-decoration:none">exe</a></td>
                     </tr>
                 </tbody>
-            </table> -->
+            </table>
         </div>
     </div>
     <br>
@@ -100,7 +101,7 @@
                     </tr>
                 </tbody>
             </table>
-            <!-- <p>Installers:</p>
+            <p>Installers:</p>
             <table class="table table-sm">
                 <thead>
                     <tr>
@@ -111,12 +112,13 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Windows 32-bit & 64-bit</td>
-                        <td></td>
-                        <td>{{ latest_windows32_bit_archive | default("-") }}</td>
+                        {% set second_installer = installers[(installers.keys() | sort(reverse=true) | list)[1]] %}
+                        <td>Windows 64-bit</td>
+                        <td>{{ second_installer.download_url.sha256_hash }}</td>
+                        <td><a href="{{second_installer.download_url}}" style="text-decoration:none">exe</a></td>
                     </tr>
                 </tbody>
-            </table> -->
+            </table>
         </div>
     </div>
     <br>

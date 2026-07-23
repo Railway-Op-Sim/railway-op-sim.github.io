@@ -4,6 +4,8 @@ import pycountry
 import pydantic as pd
 import semver
 
+MODEL_CONFIG = pd.ConfigDict(arbitrary_types_allowed=True, extra="forbid")
+
 
 class FileStorage(pd.BaseModel):
     scheme: str
@@ -13,6 +15,12 @@ class FileStorage(pd.BaseModel):
 
     def __str__(self) -> str:
         return f"{self.scheme}://{self.netloc}{self.path}"
+
+
+class Installer(pd.BaseModel):
+    semantic_version: semver.Version
+    download_url: FileStorage
+    model_config = MODEL_CONFIG
 
 
 class Version(pd.BaseModel):
@@ -25,7 +33,7 @@ class Version(pd.BaseModel):
     download_url: FileStorage
     project_name: str
     download_hash: str
-    model_config = pd.ConfigDict(arbitrary_types_allowed=True)
+    model_config = MODEL_CONFIG
 
     def __str__(self) -> str:
         return f"{self.project_name} ({self.semantic_version})"
@@ -40,7 +48,7 @@ class Project(pd.BaseModel):
     country_code: str
     author: str
     versions: dict[semver.Version, Version]
-    model_config = pd.ConfigDict(arbitrary_types_allowed=True)
+    model_config = MODEL_CONFIG
 
     @pd.field_validator("country_code", mode="before")
     @classmethod
@@ -76,7 +84,7 @@ class ProgramVersion(pd.BaseModel):
     author: str
     download_url_32bit: FileStorage
     download_url_64bit: FileStorage | None = None
-    model_config = pd.ConfigDict(arbitrary_types_allowed=True)
+    model_config = MODEL_CONFIG
 
     def __str__(self) -> str:
         return f"Railway Operation Simulator ({self.semantic_version})"

@@ -63,6 +63,7 @@ if __name__ in "__main__":
                 current_year=datetime.datetime.now(tz=datetime.UTC).strftime("%Y"),
                 file_name_32bit="x86",
                 file_name_64bit="x64",
+                installers=_project_data.installers,
                 discord_server_invite="https://discord.gg/FmE8dxN",
             )
         for country_projects in _project_data.projects.values():

@@ -5,7 +5,7 @@ from requests.models import Response
 import http
 import datetime
 import semver
-from railos_static_website.models import Project, Version, FileStorage
+from railos_static_website.models import Project, Version, FileStorage, Installer
 from railos_static_website.utilities import hash_file
 
 import requests
@@ -55,14 +55,69 @@ class GitHubRailOSProjectData:
         _data_cache.mkdir(exist_ok=True)
 
         self._retrieve_or_get_metadata(user_name, _cache_file)
+        self._installer_repo: str = "NSIS-Windows-Installer"
         self._filter_to_project_repos()
         self._filter_to_released_projects(_data_cache)
         self.projects: dict[str, dict[str, Project]] = self._build_versions()
+        self.installers: dict[semver.Version, Installer] = self._get_installers(
+            user_name
+        )
 
     def error(self, msg: str) -> None:
         print(f"WARNING: {msg}")
         with self._error_log.open("a") as out_f:
             _ = out_f.write(msg)
+
+    def _get_installers(self, user_name: str) -> dict[semver.Version, Installer]:
+        _api_url: str = "/".join(
+            (
+                GITHUB_RESTAPI_ENDPOINT,
+                "repos",
+                RAILOS_GITHUB_ORGANISATION,
+                self._installer_repo,
+                "releases",
+            )
+        )
+        self._headers = {"User-Agent": user_name}
+
+        if self._api_token:
+            print("Using API Token")
+            self._headers = {"Authorization": f"Bearer {self._api_token}"}
+
+        _org_repos: Response = requests.get(
+            _api_url,
+            params=self._params,
+            headers=self._headers,
+        )
+
+        if _org_repos.status_code != http.HTTPStatus.OK:
+            self.error("Failed to retrieve latest installer versions.")
+            return {}
+
+        _latest_release = _org_repos.json()[0]
+        _installers: dict[semver.Version, Installer] = {}
+
+        for asset in _latest_release.get("assets", []):
+            _name: str = asset["name"]
+            _version: str = (
+                _name.replace("Install_RailOS_", "")
+                .replace("_", ".")
+                .replace(".exe", "")
+            )
+            _parsed_url = urllib.parse.urlparse(asset["browser_download_url"])
+
+            _file_remote_data = {
+                "scheme": _parsed_url.scheme,
+                "netloc": _parsed_url.netloc,
+                "path": _parsed_url.path,
+                "sha256_hash": asset["digest"],
+            }
+            _semversion = semver.Version.parse(_version)
+            _installers[_semversion] = Installer(
+                semantic_version=_semversion,
+                download_url=FileStorage(**_file_remote_data),
+            )
+        return _installers
 
     @property
     def latest_projects(self) -> dict[str, Version]:
@@ -98,35 +153,38 @@ class GitHubRailOSProjectData:
         if self._api_token:
             print("Using API Token")
             self._headers = {"Authorization": f"Bearer {self._api_token}"}
-        page = 0
+
         next_page: str = f"{_org_repos_url}?page=1"
 
-        while True:
+        while next_page:
             print(f"Getting page {next_page}")
 
             _org_repos: Response = requests.get(
                 next_page,
-                params=self._params | {"page": page},
+                params=self._params,
                 headers=self._headers,
             )
+
+            if _org_repos.status_code != 200:
+                self.error(
+                    "Failed to retrieve data from GitHub, "
+                    + f"request to '{_org_repos_url}' "
+                    + f"returned status code {_org_repos.status_code}"
+                )
+                return
+
+            cache_file.parent.mkdir(exist_ok=True)
+
+            self._repo_list += _org_repos.json()
+            print(f"Appended: {list(i['name'] for i in _org_repos.json())}")
+
             _new_page = _org_repos.links.get("next", {}).get("url")
             if _new_page == next_page:
                 break
             next_page = _new_page
 
-            if _org_repos.status_code != 200:
-                raise RuntimeError(
-                    "Failed to retrieve data from GitHub, "
-                    + f"request to '{_org_repos_url}' "
-                    + f"returned status code {_org_repos.status_code}"
-                )
-
-            cache_file.parent.mkdir(exist_ok=True)
-
-            with cache_file.open("w") as out_file:
-                json.dump(_org_repos.json(), out_file, indent=2)
-
-            self._repo_list += _org_repos.json()
+        with cache_file.open("w") as out_file:
+            json.dump(self._repo_list, out_file, indent=2)
 
     def _filter_to_project_repos(self) -> None:
         print("Filtering project repositories.")
@@ -167,6 +225,7 @@ class GitHubRailOSProjectData:
                 _release_results.append(result)
                 continue
 
+            print(result["name"], result["releases_url"].replace("{/id}", ""))
             _releases_req = requests.get(
                 result["releases_url"].replace("{/id}", ""),
                 headers=self._headers,
@@ -261,7 +320,7 @@ class GitHubRailOSProjectData:
                 "scheme": _parsed_url.scheme,
                 "netloc": _parsed_url.netloc,
                 "path": _parsed_url.path,
-                "hash": _hash,
+                "sha256_hash": _hash,
             }
 
         return _metadata, _file_remote_data, _image_local_data, _digest.hexdigest()
