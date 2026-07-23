@@ -1,10 +1,10 @@
 [
   {
-    "url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/276255008",
-    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/276255008/assets",
-    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/276255008/assets{?name,label}",
-    "html_url": "https://github.com/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/tag/v1.0.0",
-    "id": 276255008,
+    "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Shakespeare-Line/releases/358817997",
+    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Shakespeare-Line/releases/358817997/assets",
+    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/GB-Shakespeare-Line/releases/358817997/assets{?name,label}",
+    "html_url": "https://github.com/Railway-Op-Sim/GB-Shakespeare-Line/releases/tag/v1.0.0",
+    "id": 358817997,
     "author": {
       "login": "github-actions[bot]",
       "id": 41898282,
@@ -26,22 +26,22 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "node_id": "RE_kwDOQ1m4a84Qd1Eg",
+    "node_id": "RE_kwDOOR2H0c4VYyDN",
     "tag_name": "v1.0.0",
     "target_commitish": "main",
-    "name": "Railway-Op-Sim/FR-Western-Lyon-Tram-Train Release v1.0.0",
+    "name": "Railway-Op-Sim/GB-Shakespeare-Line Release v1.0.0",
     "draft": false,
     "immutable": false,
     "prerelease": false,
-    "created_at": "2026-01-13T07:16:14Z",
-    "updated_at": "2026-01-13T07:17:03Z",
-    "published_at": "2026-01-13T07:17:03Z",
+    "created_at": "2026-07-23T16:29:50Z",
+    "updated_at": "2026-07-23T16:30:32Z",
+    "published_at": "2026-07-23T16:30:31Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/assets/339828570",
-        "id": 339828570,
-        "node_id": "RA_kwDOQ1m4a84UQV9a",
-        "name": "Western-Lyon-Tram-Train_v1_0_0.zip",
+        "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Shakespeare-Line/releases/assets/487394686",
+        "id": 487394686,
+        "node_id": "RA_kwDOOR2H0c4dDQ1-",
+        "name": "Shakespeare-Line_v1_0_0.zip",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -66,16 +66,16 @@
         },
         "content_type": "application/zip",
         "state": "uploaded",
-        "size": 93673,
-        "digest": "sha256:fc8432cacdb1b9566cc222cf18032b897b1951bc28eb7859251784224773950e",
-        "download_count": 88,
-        "created_at": "2026-01-13T07:17:03Z",
-        "updated_at": "2026-01-13T07:17:03Z",
-        "browser_download_url": "https://github.com/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/releases/download/v1.0.0/Western-Lyon-Tram-Train_v1_0_0.zip"
+        "size": 126370,
+        "digest": "sha256:06e14c6233815985b44ec11a63c6f68873db65beaa5353837e202cdc8a4a8785",
+        "download_count": 0,
+        "created_at": "2026-07-23T16:30:32Z",
+        "updated_at": "2026-07-23T16:30:32Z",
+        "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Shakespeare-Line/releases/download/v1.0.0/Shakespeare-Line_v1_0_0.zip"
       }
     ],
-    "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/tarball/v1.0.0",
-    "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/FR-Western-Lyon-Tram-Train/zipball/v1.0.0",
+    "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Shakespeare-Line/tarball/v1.0.0",
+    "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Shakespeare-Line/zipball/v1.0.0",
     "body": ""
   }
 ]
