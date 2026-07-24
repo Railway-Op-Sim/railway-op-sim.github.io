@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 64790,
         "digest": "sha256:92b8fb975540368878281c2cc599f3863b5767a4d8177528a2a03898e6c6f1d7",
-        "download_count": 0,
+        "download_count": 4,
         "created_at": "2026-07-23T20:23:40Z",
         "updated_at": "2026-07-23T20:23:40Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-North-Downs-Line-East/releases/download/v1.0.0/North-Downs-Line-East_v1_0_0.zip"

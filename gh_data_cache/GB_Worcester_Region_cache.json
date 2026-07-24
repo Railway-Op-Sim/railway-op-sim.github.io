@@ -1,10 +1,10 @@
 [
   {
-    "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/291816458",
-    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/291816458/assets",
-    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/291816458/assets{?name,label}",
+    "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/359428862",
+    "assets_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/359428862/assets",
+    "upload_url": "https://uploads.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/359428862/assets{?name,label}",
     "html_url": "https://github.com/Railway-Op-Sim/GB-Worcester-Region/releases/tag/v1.1.0",
-    "id": 291816458,
+    "id": 359428862,
     "author": {
       "login": "github-actions[bot]",
       "id": 41898282,
@@ -26,21 +26,21 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "node_id": "RE_kwDOORNLuc4RZMQK",
+    "node_id": "RE_kwDOORNLuc4VbHL-",
     "tag_name": "v1.1.0",
     "target_commitish": "main",
     "name": "Railway-Op-Sim/GB-Worcester-Region Release v1.1.0",
     "draft": false,
     "immutable": false,
     "prerelease": false,
-    "created_at": "2026-03-01T16:31:50Z",
-    "updated_at": "2026-03-01T16:33:16Z",
-    "published_at": "2026-03-01T16:32:30Z",
+    "created_at": "2026-07-24T16:49:08Z",
+    "updated_at": "2026-07-24T16:50:03Z",
+    "published_at": "2026-07-24T16:50:03Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/assets/364719949",
-        "id": 364719949,
-        "node_id": "RA_kwDOORNLuc4VvS9N",
+        "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/assets/488610544",
+        "id": 488610544,
+        "node_id": "RA_kwDOORNLuc4dH5rw",
         "name": "Worcester-Region_v1_1_0.zip",
         "label": "",
         "uploader": {
@@ -66,17 +66,17 @@
         },
         "content_type": "application/zip",
         "state": "uploaded",
-        "size": 89043,
-        "digest": "sha256:0774fb7126a93f25ee4870a10eb392faef7cedb983be4b35eca49981a9fcbb01",
-        "download_count": 93,
-        "created_at": "2026-03-01T16:32:30Z",
-        "updated_at": "2026-03-01T16:32:30Z",
+        "size": 89042,
+        "digest": "sha256:6c9853ee103cecac56c7bc29f559991f006b452ce6443618deeb1fe9ad2485e0",
+        "download_count": 0,
+        "created_at": "2026-07-24T16:50:03Z",
+        "updated_at": "2026-07-24T16:50:03Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Worcester-Region/releases/download/v1.1.0/Worcester-Region_v1_1_0.zip"
       }
     ],
     "tarball_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/tarball/v1.1.0",
     "zipball_url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/zipball/v1.1.0",
-    "body": ""
+    "body": null
   },
   {
     "url": "https://api.github.com/repos/Railway-Op-Sim/GB-Worcester-Region/releases/291816469",
@@ -147,7 +147,7 @@
         "state": "uploaded",
         "size": 78369,
         "digest": "sha256:880fa3d294804b767459a6effda79736b8563d706db8bdb6183f175a26e2f8d8",
-        "download_count": 93,
+        "download_count": 97,
         "created_at": "2026-03-01T16:32:34Z",
         "updated_at": "2026-03-01T16:32:34Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Worcester-Region/releases/download/v1.0.0/Worcester-Region_v1_0_0.zip"
