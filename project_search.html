@@ -8,7 +8,6 @@
 
   <!-- Move from the Django template tag to a clean web path -->
   <script src="/static/colour-modes.js"></script>
-  <script src="/static/copy-button.js"></script>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -107,7 +106,8 @@
         </ul>
       </div>
       <form class="d-none d-md-flex" role="search" action="/project_search.html" method="get">
-        <input class="form-control me-2" type="search" name="name" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" name="name" id="searchInput" placeholder="Search"
+          aria-label="Search" required>
         <button class="btn btn-secondary" type="submit">Search</button>
       </form>
       <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-none d-md-flex align-items-center"
@@ -137,52 +137,72 @@
   <div class="col main w-100">
     
 
-<br>
+<div class="container my-5">
+    <h2>Search Results for: <span id="searchTerm" class="text-primary"></span></h2>
+    <hr>
 
-<div class="container text-center">
-    <div class="row">
-        <div class="col d-block d-sm-none mb-4">
-            
-            <img class="img-fluid" src="/media/project_images/ValleyLines.bmp" alt="">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col align-items-end d-none d-sm-block">
-            
-            <img class="d-inline-block align-text-top img-fluid" src="/media/project_images/ValleyLines.bmp" alt="">
-        </div>
-        <div class="col text-start">
-            <p class="lead">
-                Valleylines
-                <br><i>RailOS Dev Team</i>
-            </p>
-            <p>
-                Simulation of the area around the city of Cardiff, Wales, UK
-            </p>
-            <p class="text-body-secondary">
-                sha256:ac7cf3888ceaaa6a93901490d396aea9387f0c24cd64622ceb8741ff8ba3af9f
-            </p>
-            <div class="card-body">
-                <a href="https://github.com/Railway-Op-Sim/GB-ValleyLines/releases/download/v1.0.1/ValleyLines_v1_0_1.zip" class="btn btn-secondary">Download v1.0.1</a>
-                <a href="https://github.com/Railway-Op-Sim/GB-ValleyLines/"
-                    class="btn btn-secondary d-inline-flex align-items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                    </svg>
-                    GitHub
-                </a>
-            </div>
-
+    <!-- Search Results List -->
+    <div id="searchResults" class="list-group mt-4">
+        <div class="spinner-border text-secondary" role="status">
+            <span class="visually-hidden">Loading results...</span>
         </div>
     </div>
 </div>
 
+<!-- MiniSearch Library -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js"></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        // 1. Parse URL Query Parameters (?name=query)
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('name');
 
-<br>
+        const searchTermDisplay = document.getElementById('searchTerm');
+        const resultsContainer = document.getElementById('searchResults');
 
+        if (!query || query.trim() === '') {
+            searchTermDisplay.textContent = 'None';
+            resultsContainer.innerHTML = '<p class="text-muted">Please enter a term in the search box.</p>';
+            return;
+        }
+
+        searchTermDisplay.textContent = `"${query}"`;
+
+        // 2. Initialize MiniSearch
+        const miniSearch = new MiniSearch({
+            fields: ['title', 'content'],
+            storeFields: ['title', 'url', 'content'],
+            searchOptions: {
+                fuzzy: 0.2,
+                prefix: true
+            }
+        });
+
+        // 3. Fetch index and perform search
+        try {
+            const response = await fetch('/search-index.json');
+            const documents = await response.json();
+            miniSearch.addAll(documents);
+
+            const results = miniSearch.search(query);
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="alert alert-warning">No matching results found.</div>';
+            } else {
+                resultsContainer.innerHTML = results.map(item => `
+            <a href="${item.url}" class="list-group-item list-group-item-action py-3">
+              <h5 class="mb-1 display-7"><bold>${item.title}</bold></h5>
+              <p class="mb-1 display-8">${item.content.substring(0, 150)}...</p>
+            </a>
+          `).join('');
+            }
+        } catch (err) {
+            console.error('Error fetching search index:', err);
+            resultsContainer.innerHTML = '<div class="alert alert-danger">Failed to load search results.</div>';
+        }
+    });
+</script>
 
   </div>
   </center>
@@ -193,7 +213,7 @@
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <!-- Add list items here for links in footer -->
       </ul>
-      <p class="text-center text-muted">&copy;  Railway Operation Simulator. Website designed by
+      <p class="text-center text-muted">&copy; 2026 Railway Operation Simulator. Website designed by
         Daniel Gill & Kristian Zarebski. </p>
     </footer>
   </div>

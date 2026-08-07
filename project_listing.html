@@ -8,7 +8,6 @@
 
   <!-- Move from the Django template tag to a clean web path -->
   <script src="/static/colour-modes.js"></script>
-  <script src="/static/copy-button.js"></script>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -107,7 +106,8 @@
         </ul>
       </div>
       <form class="d-none d-md-flex" role="search" action="/project_search.html" method="get">
-        <input class="form-control me-2" type="search" name="name" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" name="name" id="searchInput" placeholder="Search"
+          aria-label="Search" required>
         <button class="btn btn-secondary" type="submit">Search</button>
       </form>
       <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-none d-md-flex align-items-center"
@@ -667,6 +667,26 @@
                     <div class="col">
                         <div class="card h-100">
                             
+                            <img class="card-img-top" src="/media/project_images/ValleyLines.bmp"
+                                style="height: 180px; object-fit: cover;" alt="Cardiff Valley Lines">
+                            
+                            <div class="card-body">
+                                <h5 class="card-title">Cardiff Valley Lines</h5>
+                                <i>RailOS Dev Team</i>
+                                <p class="card-text">Simulation of the area around the city of Cardiff, Wales, UK</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="/projects/cardiff_valley_lines.html"
+                                    class="btn btn-secondary w-100 me-2">More
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            
                             <img class="card-img-top" src="/media/project_images/Emerson_Park.bmp"
                                 style="height: 180px; object-fit: cover;" alt="Emerson Park">
                             
@@ -1057,26 +1077,6 @@
                             </div>
                             <div class="card-footer bg-transparent border-top-0">
                                 <a href="/projects/thameslink_core.html"
-                                    class="btn btn-secondary w-100 me-2">More
-                                    Info</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col">
-                        <div class="card h-100">
-                            
-                            <img class="card-img-top" src="/media/project_images/ValleyLines.bmp"
-                                style="height: 180px; object-fit: cover;" alt="Valleylines">
-                            
-                            <div class="card-body">
-                                <h5 class="card-title">Valleylines</h5>
-                                <i>RailOS Dev Team</i>
-                                <p class="card-text">Simulation of the area around the city of Cardiff, Wales, UK</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-top-0">
-                                <a href="/projects/valleylines.html"
                                     class="btn btn-secondary w-100 me-2">More
                                     Info</a>
                             </div>
