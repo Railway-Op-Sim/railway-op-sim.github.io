@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block page_contents %}
+
+<div class="container my-5">
+    <h2>Search Results for: <span id="searchTerm" class="text-primary"></span></h2>
+    <hr>
+
+    <!-- Search Results List -->
+    <div id="searchResults" class="list-group mt-4">
+        <div class="spinner-border text-secondary" role="status">
+            <span class="visually-hidden">Loading results...</span>
+        </div>
+    </div>
+</div>
+
+<!-- MiniSearch Library -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        // 1. Parse URL Query Parameters (?name=query)
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('name');
+
+        const searchTermDisplay = document.getElementById('searchTerm');
+        const resultsContainer = document.getElementById('searchResults');
+
+        if (!query || query.trim() === '') {
+            searchTermDisplay.textContent = 'None';
+            resultsContainer.innerHTML = '<p class="text-muted">Please enter a term in the search box.</p>';
+            return;
+        }
+
+        searchTermDisplay.textContent = `"${query}"`;
+
+        // 2. Initialize MiniSearch
+        const miniSearch = new MiniSearch({
+            fields: ['title', 'content'],
+            storeFields: ['title', 'url', 'content'],
+            searchOptions: {
+                fuzzy: 0.2,
+                prefix: true
+            }
+        });
+
+        // 3. Fetch index and perform search
+        try {
+            const response = await fetch('/search-index.json');
+            const documents = await response.json();
+            miniSearch.addAll(documents);
+
+            const results = miniSearch.search(query);
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="alert alert-warning">No matching results found.</div>';
+            } else {
+                resultsContainer.innerHTML = results.map(item => `
+            <a href="${item.url}" class="list-group-item list-group-item-action py-3">
+              <h5 class="mb-1 display-7"><bold>${item.title}</bold></h5>
+              <p class="mb-1 display-8">${item.content.substring(0, 150)}...</p>
+            </a>
+          `).join('');
+            }
+        } catch (err) {
+            console.error('Error fetching search index:', err);
+            resultsContainer.innerHTML = '<div class="alert alert-danger">Failed to load search results.</div>';
+        }
+    });
+</script>
+{% endblock %}

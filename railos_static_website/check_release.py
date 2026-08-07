@@ -22,13 +22,19 @@ class GitHubRailOSReleaseData:
     """Retrieve RailOS latest releases."""
 
     def __init__(
-        self, destination: pathlib.Path, user_name: str, *, hash_files: bool = True
+        self,
+        destination: pathlib.Path,
+        user_name: str,
+        *,
+        hash_files: bool = True,
+        token: str | None = None,
     ) -> None:
         super().__init__()
         self._hash_files: bool = hash_files
         self._release_list: dict[str, dict[str, typing.Any]] = {}
         self._params: dict[str, int] = {"per_page": 100}
         self._headers: dict[str, str] = {}
+        self._token: str | None = token
         self.program_versions: dict[semver.Version, ProgramVersion] = {}
         _cache_file: pathlib.Path = destination.joinpath("railos_release.json")
         if not (
@@ -60,6 +66,9 @@ class GitHubRailOSReleaseData:
         )
 
         self._headers = {"User-Agent": user_name}
+
+        if self._token:
+            self._headers["Authorization"] = f"Bearer {self._token}"
 
         _latest_info = requests.get(
             _railos_releases_url, params=self._params, headers=self._headers
