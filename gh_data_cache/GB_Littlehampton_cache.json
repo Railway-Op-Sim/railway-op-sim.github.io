@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 80112,
         "digest": "sha256:f89d4d94c55c4bdb0591fbfbdfba42c87e81ca26b2ee652070018dc0b81e8e3b",
-        "download_count": 7,
+        "download_count": 9,
         "created_at": "2026-07-23T16:24:07Z",
         "updated_at": "2026-07-23T16:24:07Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Littlehampton/releases/download/v1.0.0/Littlehampton_v1_0_0.zip"

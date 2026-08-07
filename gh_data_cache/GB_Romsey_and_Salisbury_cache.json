@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 113920,
         "digest": "sha256:05823926a0a0288d423e6ea6afa2c39c6f1748d310919a9deade645c6f8ff34f",
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2026-07-23T20:44:43Z",
         "updated_at": "2026-07-23T20:44:44Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Romsey-and-Salisbury/releases/download/v1.0.0/Romsey-and-Salisbury_v1_0_0.zip"
