@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 162375,
         "digest": "sha256:71bd6c4132012b8bd37a90a72d5b88196c1130be03e0787275cc95337cdf9b0e",
-        "download_count": 6,
+        "download_count": 7,
         "created_at": "2026-07-23T17:07:35Z",
         "updated_at": "2026-07-23T17:07:35Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Cornwall/releases/download/v1.0.0/Cornwall_v1_0_0.zip"

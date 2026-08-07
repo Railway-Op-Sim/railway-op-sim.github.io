@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 138675,
         "digest": "sha256:4e7fcbed6d7a181ee08f3457c6caeb1a46ae680986ae6b204c722484b5543288",
-        "download_count": 11,
+        "download_count": 12,
         "created_at": "2026-07-22T17:21:39Z",
         "updated_at": "2026-07-22T17:21:39Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/BE-Antwerpen-Centraal/releases/download/v1.0.1/Antwerpen-Centraal_v1_0_1.zip"

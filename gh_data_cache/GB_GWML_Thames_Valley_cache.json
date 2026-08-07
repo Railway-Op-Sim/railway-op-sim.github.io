@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 156960,
         "digest": "sha256:589923bc6d086f619063b1ad3a53be32bff0d1a52fe43fce9a714e0f963be6f9",
-        "download_count": 10,
+        "download_count": 11,
         "created_at": "2026-07-23T16:20:56Z",
         "updated_at": "2026-07-23T16:20:57Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-GWML-Thames-Valley/releases/download/v1.0.0/GWML-Thames-Valley_v1_0_0.zip"
