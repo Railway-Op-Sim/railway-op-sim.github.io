@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 34650,
         "digest": "sha256:1557509b9cfe80b4540db39ca7c795f28a33edb9f302b09f14e2ffbce168c0dd",
-        "download_count": 5,
+        "download_count": 6,
         "created_at": "2026-07-23T17:19:44Z",
         "updated_at": "2026-07-23T17:19:44Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Emerson-Park/releases/download/v1.0.0/Emerson-Park_v1_0_0.zip"

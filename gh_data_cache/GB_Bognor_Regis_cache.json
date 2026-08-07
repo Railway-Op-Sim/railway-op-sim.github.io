@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 43411,
         "digest": "sha256:4d052c7065e3b6a5b7090c868b38d0ca6f38f5241257d4506b5d652ec21a32ae",
-        "download_count": 9,
+        "download_count": 10,
         "created_at": "2026-07-23T16:14:35Z",
         "updated_at": "2026-07-23T16:14:36Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Bognor-Regis/releases/download/v1.0.0/Bognor-Regis_v1_0_0.zip"

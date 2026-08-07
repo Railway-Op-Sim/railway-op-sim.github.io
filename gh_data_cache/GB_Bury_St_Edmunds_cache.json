@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 72110,
         "digest": "sha256:1172d9ab1e3666bd5635928546ad67f3724691499dc2ce131a3ccf61cdc70bc3",
-        "download_count": 9,
+        "download_count": 10,
         "created_at": "2026-07-23T16:16:17Z",
         "updated_at": "2026-07-23T16:16:18Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Bury-St-Edmunds/releases/download/v1.0.0/Bury-St-Edmunds_v1_0_0.zip"
