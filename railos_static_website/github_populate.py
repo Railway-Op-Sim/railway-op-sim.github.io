@@ -120,19 +120,19 @@ class GitHubRailOSProjectData:
         return _installers
 
     @property
-    def latest_projects(self) -> dict[str, Version]:
+    def latest_projects(self) -> dict[str, Project]:
         _all: dict[tuple[str, str], Version] = {}
-        for country_data in self.projects.values():
-            for project in country_data.values():
-                _all[f"{project.display_name}", f"{project.websafe_name}"] = list(
+        for country_label, country_data in self.projects.items():
+            for project_label, project in country_data.items():
+                _all[(country_label, project_label)] = list(
                     sorted(project.versions.items(), key=lambda i: i[1].release_date)
                 )[0][1]
         _all = dict(sorted(_all.items(), key=lambda i: i[1].release_date))
-        _out: dict[str, Version] = {}
-        for i, (key, value) in enumerate(_all.items()):
+        _out: dict[str, Project] = {}
+        for i, (country, key) in enumerate(_all):
             if i == 5:
                 break
-            _out[key] = value
+            _out[key] = self.projects[country][key]
         return _out
 
     def _retrieve_or_get_metadata(
