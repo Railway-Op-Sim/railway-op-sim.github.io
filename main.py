@@ -17,7 +17,9 @@ def render_page(
     _template_dir = template_dir or pathlib.Path(__file__).parent.joinpath("templates")
     if not _template_dir.exists():
         raise FileNotFoundError("Template directory does not exist.")
-    _environment = jinja2.Environment(loader=jinja2.FileSystemLoader(_template_dir))
+    _environment = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(_template_dir), undefined=jinja2.StrictUndefined
+    )
     _destination = destination or pathlib.Path(__file__).parent.joinpath("dist")
     _template = _environment.get_template(page)
     _output = _template.render(

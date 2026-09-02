@@ -121,10 +121,10 @@ class GitHubRailOSProjectData:
 
     @property
     def latest_projects(self) -> dict[str, Version]:
-        _all: dict[str, Version] = {}
+        _all: dict[tuple[str, str], Version] = {}
         for country_data in self.projects.values():
             for project in country_data.values():
-                _all[f"{project.display_name}"] = list(
+                _all[f"{project.display_name}", f"{project.websafe_name}"] = list(
                     sorted(project.versions.items(), key=lambda i: i[1].release_date)
                 )[0][1]
         _all = dict(sorted(_all.items(), key=lambda i: i[1].release_date))
