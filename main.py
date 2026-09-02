@@ -94,6 +94,9 @@ if __name__ in "__main__":
                         file_name=f"{project.websafe_name}.html",
                         project_data=_project_data,
                         program_releases=_program_releases,
+                        current_year=datetime.datetime.now(tz=datetime.UTC).strftime(
+                            "%Y"
+                        ),
                         project=project,
                     )
         else:
