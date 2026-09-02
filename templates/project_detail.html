@@ -6,7 +6,7 @@
 <div class="container text-center">
     <div class="row">
         <div class="col d-block d-sm-none mb-4">
-            {% set _, latest_version = project.versions.items() | sort(attribute="release_date") | last %}
+            {% set latest_version = project.versions.values() | sort(attribute="release_date") | last %}
             <img class="img-fluid" src="{{ latest_version.image_url }}" alt="">
         </div>
     </div>
