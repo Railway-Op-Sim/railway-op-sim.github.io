@@ -30,7 +30,7 @@
                     {% set project = projects[country_code][project_name] %}
                     <div class="col">
                         <div class="card h-100">
-                            {% with _, latest_version=project.versions.items() | sort(attribute="release_date") | last
+                            {% with latest_version=project.versions.values() | sort(attribute="release_date") | last
                             %}
                             <img class="card-img-top" src="{{ latest_version.image_url }}"
                                 style="height: 180px; object-fit: cover;" alt="{{ project.name }}">
