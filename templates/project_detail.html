@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col align-items-end d-none d-sm-block">
-            {% set _, latest_version = project.versions.items() | sort(attribute="release_date") | last %}
+            {% set latest_version = project.versions.values() | sort(attribute="release_date") | last %}
             <img class="d-inline-block align-text-top img-fluid" src="{{ latest_version.image_url }}" alt="">
         </div>
         <div class="col text-start">
