@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 194721,
         "digest": "sha256:2e8ba26a727cab111d984ceabcb6355fd6691ec5c53a24ba24ef5b56fa846e5a",
-        "download_count": 14,
+        "download_count": 21,
         "created_at": "2026-07-23T20:12:53Z",
         "updated_at": "2026-07-23T20:12:53Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/GB-Lea-Valley-Lines/releases/download/v1.0.0/Lea-Valley-Lines_v1_0_0.zip"

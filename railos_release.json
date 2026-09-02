@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 10588302,
         "digest": "sha256:504c8c12f5b680fd450fc50b75b6ce3557515ebc481ff931de7f521dcbff2064",
-        "download_count": 27,
+        "download_count": 37,
         "created_at": "2026-01-12T09:41:40Z",
         "updated_at": "2026-01-12T09:42:58Z",
         "browser_download_url": "https://github.com/AlbertBall/railway-dot-exe/releases/download/v2.23.4/RailOS32-v2.23.4.zip"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 10833486,
         "digest": "sha256:277186d6be6a2b88703932ece2dab33edeb02a63c2a1730e291f1e3037e81caf",
-        "download_count": 112,
+        "download_count": 160,
         "created_at": "2026-01-12T09:43:10Z",
         "updated_at": "2026-01-12T09:44:28Z",
         "browser_download_url": "https://github.com/AlbertBall/railway-dot-exe/releases/download/v2.23.4/RailOS64-v2.23.4.zip"
@@ -2344,7 +2344,7 @@
         "state": "uploaded",
         "size": 9907959,
         "digest": null,
-        "download_count": 48,
+        "download_count": 49,
         "created_at": "2022-10-12T10:28:43Z",
         "updated_at": "2022-10-12T10:29:55Z",
         "browser_download_url": "https://github.com/AlbertBall/railway-dot-exe/releases/download/v2.13.2/Release-v2.13.2.zip"
@@ -2423,7 +2423,7 @@
         "state": "uploaded",
         "size": 9862720,
         "digest": null,
-        "download_count": 41,
+        "download_count": 42,
         "created_at": "2022-08-04T16:30:55Z",
         "updated_at": "2022-08-04T16:32:08Z",
         "browser_download_url": "https://github.com/AlbertBall/railway-dot-exe/releases/download/v2.13.1/Release.v2.13.1.zip"

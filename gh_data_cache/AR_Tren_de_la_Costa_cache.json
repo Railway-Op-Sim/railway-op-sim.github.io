@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 57772,
         "digest": "sha256:630e492aec19096aafcefe71a5e457fcd8f1b37e5db847ae4d6c760573834b16",
-        "download_count": 19,
+        "download_count": 27,
         "created_at": "2026-07-22T17:30:06Z",
         "updated_at": "2026-07-22T17:30:07Z",
         "browser_download_url": "https://github.com/Railway-Op-Sim/AR-Tren-de-la-Costa/releases/download/v1.0.0/Tren-de-la-Costa_v1_0_0.zip"
